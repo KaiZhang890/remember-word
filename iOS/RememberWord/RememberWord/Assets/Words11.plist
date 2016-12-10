@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>word</key>
+		<string>interplay</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;ɪntəpleɪ/</string>
+		<key>translation</key>
+		<string>vi./n. 相互作用，相互影响</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>convenient</string>
+		<key>phoneticSymbol</key>
+		<string>/kən&apos;viːnɪənt/</string>
+		<key>translation</key>
+		<string>adj. 方便的，便利的；适宜的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>genuine</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;dʒenjʊɪn/</string>
+		<key>translation</key>
+		<string>adj. 真正的；真实的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>attentive</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;tentɪv/</string>
+		<key>translation</key>
+		<string>adj. 注意的，专心的；关心的，体贴的；留意的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>observation</string>
+		<key>phoneticSymbol</key>
+		<string>/ɒbzə&apos;veɪʃn/</string>
+		<key>translation</key>
+		<string>n. 观察，观测；监视；评论</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>personal</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;pɜːsənl/</string>
+		<key>translation</key>
+		<string>adj. 个人的，私人的；亲自的，本人的；身体的，人身的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>vitality</string>
+		<key>phoneticSymbol</key>
+		<string>/vaɪ&apos;tælɪtɪ/</string>
+		<key>translation</key>
+		<string>n. 生命力，活力</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>requirement</string>
+		<key>phoneticSymbol</key>
+		<string>/rɪ&apos;kwaɪəmənt/</string>
+		<key>translation</key>
+		<string>n. 需要，要求；需要的东西；必要条件</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>advisable</string>
+		<key>phoneticSymbol</key>
+		<string>/əd&apos;vaɪzəbl/</string>
+		<key>translation</key>
+		<string>n. 可取的，适当的；明智的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>bankrupt</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;bæŋkrʌpt/</string>
+		<key>translation</key>
+		<string>adj. 破产的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>deplete</string>
+		<key>phoneticSymbol</key>
+		<string>/dɪ&apos;pliːt/</string>
+		<key>translation</key>
+		<string>vt. 倒空；枯竭；消耗</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>influence</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;ɪnfluəns/</string>
+		<key>translation</key>
+		<string>vt. 影响\nn. 影响力；产生影响力的人</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>fantasy</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;fæntəsɪ/</string>
+		<key>translation</key>
+		<string>n. 想象</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>tragic</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;trædʒɪk/</string>
+		<key>translation</key>
+		<string>adj. 悲惨的；悲剧的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>splint</string>
+		<key>phoneticSymbol</key>
+		<string>/splɪnt/</string>
+		<key>translation</key>
+		<string>n. 细木梗；夹板\nvt. 用夹板夹</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>foam</string>
+		<key>phoneticSymbol</key>
+		<string>/fəʊm/</string>
+		<key>translation</key>
+		<string>n. 泡沫；泡沫材料\nvi. 起泡沫</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>occupation</string>
+		<key>phoneticSymbol</key>
+		<string>/ɒkjʊ&apos;peɪʃn/</string>
+		<key>translation</key>
+		<string>n. 占领；职业；消遣</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>format</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;fɔːmæt/</string>
+		<key>translation</key>
+		<string>vt. 使格式化\nn. 安排，计划；板式；格式</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>bachelor</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;bætʃələ/</string>
+		<key>translation</key>
+		<string>n. 学士；单身汉</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>typhoon</string>
+		<key>phoneticSymbol</key>
+		<string>/taɪ&apos;fuːn/</string>
+		<key>translation</key>
+		<string>n. 台风</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>appointment</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;pɔɪntmənt/</string>
+		<key>translation</key>
+		<string>n. 约会</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>slope</string>
+		<key>phoneticSymbol</key>
+		<string>/sləʊp/</string>
+		<key>translation</key>
+		<string>n. 斜坡；倾斜\nvi. 倾斜</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>complex</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;kɒmpleks/</string>
+		<key>translation</key>
+		<string>n. 综合体，集合体；建筑群；情结\nadj. 合成的；复杂的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>overhead</string>
+		<key>phoneticSymbol</key>
+		<string>/əʊvə&apos;hed/</string>
+		<key>translation</key>
+		<string>adj. 在头顶上的；高架的\nn. 天花板；经费\nadv. 在空中，在头顶上</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>population</string>
+		<key>phoneticSymbol</key>
+		<string>/pɒpjʊ&apos;leɪʃn/</string>
+		<key>translation</key>
+		<string>n. 人口</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>prey</string>
+		<key>phoneticSymbol</key>
+		<string>/preɪ/</string>
+		<key>translation</key>
+		<string>n. 猎物；牺牲品，战利品\nvi. 捕食；折磨；掠夺</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>catalogue</string>
+		<key>phoneticSymbol</key>
+		<string>/ˈkætəlɔɡ/</string>
+		<key>translation</key>
+		<string>n. 目录；系列\nvt. 编目录；记载</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>prerequisite</string>
+		<key>phoneticSymbol</key>
+		<string>/priː&apos;rekwɪzɪt/</string>
+		<key>translation</key>
+		<string>n. 先决条件，前提；必备条件\nadj. 必备的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>assessment</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;sesmənt/</string>
+		<key>translation</key>
+		<string>n. 判定，评定；核定的付款额；看法，评价</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>suggest</string>
+		<key>phoneticSymbol</key>
+		<string>/sə&apos;dʒest/</string>
+		<key>translation</key>
+		<string>v. 建议，提出；暗示</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>volt</string>
+		<key>phoneticSymbol</key>
+		<string>/vəʊlt/</string>
+		<key>translation</key>
+		<string>v. 伏特</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>weed</string>
+		<key>phoneticSymbol</key>
+		<string>/wiːd/</string>
+		<key>translation</key>
+		<string>n. 杂草</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>screw</string>
+		<key>phoneticSymbol</key>
+		<string>/skruː/</string>
+		<key>translation</key>
+		<string>v. 用螺钉固定\nn. 螺丝(钉)</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>enlighten</string>
+		<key>phoneticSymbol</key>
+		<string>/ɪn&apos;laɪtn/</string>
+		<key>translation</key>
+		<string>vt. 启发；开导；阐明</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>textile</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;tekstaɪl/</string>
+		<key>translation</key>
+		<string>n. 纺织品</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>hesitate</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;hezɪteɪt/</string>
+		<key>translation</key>
+		<string>vi. 犹豫；不情愿</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>tutor</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;tjuːtə/</string>
+		<key>translation</key>
+		<string>v. 当家庭教师\nn. 导师；家庭教师</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>topsoil</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;tɒpsɒɪl/</string>
+		<key>translation</key>
+		<string>n. 表层土</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>background</string>
+		<key>phoneticSymbol</key>
+		<string>/ˈbækɡraund/</string>
+		<key>translation</key>
+		<string>n. 背景；经历；后台；不重要或不引人注目的地方</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>impossible</string>
+		<key>phoneticSymbol</key>
+		<string>/ɪm&apos;pɒsɪbl/</string>
+		<key>translation</key>
+		<string>adj. 不可能的，办不到的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>surgeon</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;sɜːdʒən/</string>
+		<key>translation</key>
+		<string>n. 外科医生</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>promise</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;prɒmɪs/</string>
+		<key>translation</key>
+		<string>n./v. 允诺，保证；预示</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>battery</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;bætərɪ/</string>
+		<key>translation</key>
+		<string>n. 电池(组)，蓄电池(组)</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>thunder</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;θʌndə/</string>
+		<key>translation</key>
+		<string>n. 雷；雷声\nv. 打雷；轰隆响</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>delicate</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;delɪkət/</string>
+		<key>translation</key>
+		<string>adj. 纤细的；精巧的；微妙的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>account</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;kaʊnt/</string>
+		<key>translation</key>
+		<string>v. 说明，解释；导致\nn. 帐，账户；说明</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>booklet</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;bʊklət/</string>
+		<key>translation</key>
+		<string>n. 小册子</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>layout</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;leɪaʊt/</string>
+		<key>translation</key>
+		<string>n. 布局，安排，设计</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>venture</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;ventʃə/</string>
+		<key>translation</key>
+		<string>v. 敢于去；拿...冒险\nn. 风险投资，风险项目</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>shrink</string>
+		<key>phoneticSymbol</key>
+		<string>/ʃrɪŋk/</string>
+		<key>translation</key>
+		<string>v. (使)收缩；萎缩</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>gland</string>
+		<key>phoneticSymbol</key>
+		<string>/glænd/</string>
+		<key>translation</key>
+		<string>n. 腺</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>curriculum</string>
+		<key>phoneticSymbol</key>
+		<string>/kə&apos;rɪkjələm/</string>
+		<key>translation</key>
+		<string>n. 课程，全部课程</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>shortage</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;ʃɔːtɪdʒ/</string>
+		<key>translation</key>
+		<string>n. 不足，缺少</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>accreditation</string>
+		<key>phoneticSymbol</key>
+		<string>/ə,kredi&apos;teiʃən/</string>
+		<key>translation</key>
+		<string>n. 证明合格，鉴定合格</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>clerk</string>
+		<key>phoneticSymbol</key>
+		<string>/klɑːk/</string>
+		<key>translation</key>
+		<string>n. 办事员；职员</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>attach</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;tætʃ/</string>
+		<key>translation</key>
+		<string>v. 系，贴；认为有重要性；使附属，附加</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>flip</string>
+		<key>phoneticSymbol</key>
+		<string>/flɪp/</string>
+		<key>translation</key>
+		<string>v. 轻抛；轻弹</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>comment</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;kɒment/</string>
+		<key>translation</key>
+		<string>n. 注释，评论，意见\nv. 注释，评论</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>emphasize</string>
+		<key>phoneticSymbol</key>
+		<string>/ˈemfəsaiz/</string>
+		<key>translation</key>
+		<string>vt. 强调，着重</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>flame</string>
+		<key>phoneticSymbol</key>
+		<string>/fleɪm/</string>
+		<key>translation</key>
+		<string>n. 火焰；强烈的感情\nv. 发火焰，燃烧</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>foresee</string>
+		<key>phoneticSymbol</key>
+		<string>/fɔː&apos;siː/</string>
+		<key>translation</key>
+		<string>vt. 预见，预知</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>historic</string>
+		<key>phoneticSymbol</key>
+		<string>/hɪ&apos;stɒrɪk/</string>
+		<key>translation</key>
+		<string>adj. 有历史意义的；历史的，历史性的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>provision</string>
+		<key>phoneticSymbol</key>
+		<string>/prə&apos;vɪʒn/</string>
+		<key>translation</key>
+		<string>n. 供应，供应品；准备，预备；规定；给养，口粮</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>president</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;prezɪdənt/</string>
+		<key>translation</key>
+		<string>n. 总统，校长，会长，主席</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>internist</string>
+		<key>phoneticSymbol</key>
+		<string>/ɪn&apos;tɜːnɪst/</string>
+		<key>translation</key>
+		<string>n. 内科医师</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>reception</string>
+		<key>phoneticSymbol</key>
+		<string>/rɪ&apos;sepʃn/</string>
+		<key>translation</key>
+		<string>n. 接收，接受；接待；接收效果</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>suspend</string>
+		<key>phoneticSymbol</key>
+		<string>/sə&apos;spend/</string>
+		<key>translation</key>
+		<string>vt. 吊，悬挂；推迟；暂停，中止</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>explorer</string>
+		<key>phoneticSymbol</key>
+		<string>/ek&apos;splɔːrə/ </string>
+		<key>translation</key>
+		<string>n. 勘探者，探险者</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>untrustworthy</string>
+		<key>phoneticSymbol</key>
+		<string>/ʌn&apos;trʌstwɜːðɪ/</string>
+		<key>translation</key>
+		<string>adj. 不值得信任的，靠不住的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>prospective</string>
+		<key>phoneticSymbol</key>
+		<string>/prə&apos;spektɪv/</string>
+		<key>translation</key>
+		<string>adj. 预期的；未来的；可能的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>percentage</string>
+		<key>phoneticSymbol</key>
+		<string>/pə&apos;sentɪdʒ/</string>
+		<key>translation</key>
+		<string>n. 百分比，百分率</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>clue</string>
+		<key>phoneticSymbol</key>
+		<string>/kluː/</string>
+		<key>translation</key>
+		<string>n. 线索；提示</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>stammer</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;stæmə/</string>
+		<key>translation</key>
+		<string>n. 结巴，口吃\nv. 口吃</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>hawk</string>
+		<key>phoneticSymbol</key>
+		<string>/hɔːk/</string>
+		<key>translation</key>
+		<string>鹰，隼</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>swamp</string>
+		<key>phoneticSymbol</key>
+		<string>/swɒmp/</string>
+		<key>translation</key>
+		<string>vt. 淹没；使应接不暇\nn. 沼泽</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>jealous</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;dʒeləs/</string>
+		<key>translation</key>
+		<string>adj. 嫉妒的；猜疑的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>favour</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;feɪvə/</string>
+		<key>translation</key>
+		<string>n. 帮忙；偏爱；赞同；恩惠\nvt. 赞同；偏袒；有利于</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>fickle</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;fɪkl/</string>
+		<key>translation</key>
+		<string>adj. 易变的，无常的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>uphill</string>
+		<key>phoneticSymbol</key>
+		<string>/ʌp&apos;hɪl/</string>
+		<key>translation</key>
+		<string>adv. 向上，往上；上坡；艰难地</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>succeed</string>
+		<key>phoneticSymbol</key>
+		<string>/sək&apos;siːd/</string>
+		<key>translation</key>
+		<string>v. 成功；接着发生</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>gender</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;dʒendə/</string>
+		<key>translation</key>
+		<string>n. 性别；性</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>consecutive</string>
+		<key>phoneticSymbol</key>
+		<string>/kən&apos;sekjʊtɪv/</string>
+		<key>translation</key>
+		<string>adj. 连续不断的，连贯的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>diversion</string>
+		<key>phoneticSymbol</key>
+		<string>/daɪ&apos;vɜːʃn/</string>
+		<key>translation</key>
+		<string>n. 转向，转移，转换；转换视线的事物；娱乐</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>donate</string>
+		<key>phoneticSymbol</key>
+		<string>/dəʊ&apos;neɪt/</string>
+		<key>translation</key>
+		<string>vt. 捐赠，赠送</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>defence</string>
+		<key>phoneticSymbol</key>
+		<string>/dɪ&apos;fens/</string>
+		<key>translation</key>
+		<string>n. 防御，保护；辩护；答辩；防务工事</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>volume</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;vɒljuːm/</string>
+		<key>translation</key>
+		<string>n. 卷，册；体积；音量</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>refund</string>
+		<key>phoneticSymbol</key>
+		<string>/rɪ&apos;fʌnd/</string>
+		<key>translation</key>
+		<string>n. 退款\nvt. 退换(钱款)，偿付</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>regardless</string>
+		<key>phoneticSymbol</key>
+		<string>/rɪ&apos;gɑːdlɪs/</string>
+		<key>translation</key>
+		<string>adv. 不顾后果地；无论如何</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>emboss</string>
+		<key>phoneticSymbol</key>
+		<string>/ɪm&apos;bɒs/</string>
+		<key>translation</key>
+		<string>vt. 使...凸出；压花纹</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>internationalist</string>
+		<key>phoneticSymbol</key>
+		<string>/ˌɪntə&apos;næʃənəlɪst/</string>
+		<key>translation</key>
+		<string>n. 国际主义者\nadj. 国际主义者的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>scatter</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;skætə/</string>
+		<key>translation</key>
+		<string>v. 散开，驱散；撒；撒播</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>appetite</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;æpɪtaɪt/</string>
+		<key>translation</key>
+		<string>n. 食欲，胃口；欲望</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>prevail</string>
+		<key>phoneticSymbol</key>
+		<string>/prɪ&apos;veɪl/</string>
+		<key>translation</key>
+		<string>vi. 流行，盛行；占优势，战胜</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>glossary</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;glɒsərɪ/</string>
+		<key>translation</key>
+		<string>n. 词汇表；术语表</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>consolidation</string>
+		<key>phoneticSymbol</key>
+		<string>/kən,sɒlɪ&apos;deɪʃən/</string>
+		<key>translation</key>
+		<string>n. 合并；巩固</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>sulphuric acid</string>
+		<key>phoneticSymbol</key>
+		<string></string>
+		<key>translation</key>
+		<string>硫酸</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>goodwill</string>
+		<key>phoneticSymbol</key>
+		<string>/gʊd&apos;wɪl/</string>
+		<key>translation</key>
+		<string>n. 友好，善意；信誉</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>amass</string>
+		<key>phoneticSymbol</key>
+		<string>/ə&apos;mæs/</string>
+		<key>translation</key>
+		<string>vt. 积聚</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>federal</string>
+		<key>phoneticSymbol</key>
+		<string>/&apos;fedərəl/</string>
+		<key>translation</key>
+		<string>adj. 联邦的，联盟的</string>
+	</dict>
+	<dict>
+		<key>word</key>
+		<string>consideration</string>
+		<key>phoneticSymbol</key>
+		<string>/kənsɪdə&apos;reɪʃn/</string>
+		<key>translation</key>
+		<string>n. 考虑；思考；体谅</string>
+	</dict>
+</array>
+</plist>

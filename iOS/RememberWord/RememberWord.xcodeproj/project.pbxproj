@@ -7,6 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7172721DE7CD5400B6EBAB /* Words02.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172231DE7CD5400B6EBAB /* Words02.plist */; };
+		4B7172731DE7CD5400B6EBAB /* Words03.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172241DE7CD5400B6EBAB /* Words03.plist */; };
+		4B7172741DE7CD5400B6EBAB /* Words04.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172251DE7CD5400B6EBAB /* Words04.plist */; };
+		4B7172751DE7CD5400B6EBAB /* Words05.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172261DE7CD5400B6EBAB /* Words05.plist */; };
+		4B7172761DE7CD5400B6EBAB /* Words06.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172271DE7CD5400B6EBAB /* Words06.plist */; };
+		4B7172771DE7CD5400B6EBAB /* Words07.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172281DE7CD5400B6EBAB /* Words07.plist */; };
+		4B7172781DE7CD5400B6EBAB /* Words08.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172291DE7CD5400B6EBAB /* Words08.plist */; };
+		4B7172791DE7CD5400B6EBAB /* Words09.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722A1DE7CD5400B6EBAB /* Words09.plist */; };
+		4B71727A1DE7CD5400B6EBAB /* Words10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722B1DE7CD5400B6EBAB /* Words10.plist */; };
+		4B71727B1DE7CD5400B6EBAB /* Words11.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722C1DE7CD5400B6EBAB /* Words11.plist */; };
+		4B71727C1DE7CD5400B6EBAB /* Words12.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722D1DE7CD5400B6EBAB /* Words12.plist */; };
+		4B71727D1DE7CD5400B6EBAB /* Words13.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722E1DE7CD5400B6EBAB /* Words13.plist */; };
+		4B71727E1DE7CD5400B6EBAB /* Words14.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71722F1DE7CD5400B6EBAB /* Words14.plist */; };
+		4B71727F1DE7CD5400B6EBAB /* Words15.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172301DE7CD5400B6EBAB /* Words15.plist */; };
+		4B7172801DE7CD5400B6EBAB /* Words16.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172311DE7CD5400B6EBAB /* Words16.plist */; };
+		4B7172811DE7CD5400B6EBAB /* Words17.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172321DE7CD5400B6EBAB /* Words17.plist */; };
+		4B7172821DE7CD5400B6EBAB /* Words18.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172331DE7CD5400B6EBAB /* Words18.plist */; };
+		4B7172831DE7CD5400B6EBAB /* Words19.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172341DE7CD5400B6EBAB /* Words19.plist */; };
+		4B7172841DE7CD5400B6EBAB /* Words20.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172351DE7CD5400B6EBAB /* Words20.plist */; };
+		4B7172851DE7CD5400B6EBAB /* Words21.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172361DE7CD5400B6EBAB /* Words21.plist */; };
+		4B7172861DE7CD5400B6EBAB /* Words22.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172371DE7CD5400B6EBAB /* Words22.plist */; };
+		4B7172871DE7CD5400B6EBAB /* Words23.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172381DE7CD5400B6EBAB /* Words23.plist */; };
+		4B7172881DE7CD5400B6EBAB /* Words24.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172391DE7CD5400B6EBAB /* Words24.plist */; };
+		4B7172891DE7CD5400B6EBAB /* Words25.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723A1DE7CD5400B6EBAB /* Words25.plist */; };
+		4B71728A1DE7CD5400B6EBAB /* Words26.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723B1DE7CD5400B6EBAB /* Words26.plist */; };
+		4B71728B1DE7CD5400B6EBAB /* Words27.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723C1DE7CD5400B6EBAB /* Words27.plist */; };
+		4B71728C1DE7CD5400B6EBAB /* Words28.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723D1DE7CD5400B6EBAB /* Words28.plist */; };
+		4B71728D1DE7CD5400B6EBAB /* Words29.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723E1DE7CD5400B6EBAB /* Words29.plist */; };
+		4B71728E1DE7CD5400B6EBAB /* Words30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71723F1DE7CD5400B6EBAB /* Words30.plist */; };
+		4B71728F1DE7CD5400B6EBAB /* Words31.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172401DE7CD5400B6EBAB /* Words31.plist */; };
+		4B7172901DE7CD5400B6EBAB /* Words32.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172411DE7CD5400B6EBAB /* Words32.plist */; };
+		4B7172911DE7CD5400B6EBAB /* Words33.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172421DE7CD5400B6EBAB /* Words33.plist */; };
+		4B7172921DE7CD5400B6EBAB /* Words34.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172431DE7CD5400B6EBAB /* Words34.plist */; };
+		4B7172931DE7CD5400B6EBAB /* Words35.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172441DE7CD5400B6EBAB /* Words35.plist */; };
+		4B7172941DE7CD5400B6EBAB /* Words36.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172451DE7CD5400B6EBAB /* Words36.plist */; };
+		4B7172951DE7CD5400B6EBAB /* Words37.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172461DE7CD5400B6EBAB /* Words37.plist */; };
+		4B7172961DE7CD5400B6EBAB /* Words38.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172471DE7CD5400B6EBAB /* Words38.plist */; };
+		4B7172971DE7CD5400B6EBAB /* Words39.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172481DE7CD5400B6EBAB /* Words39.plist */; };
+		4B7172981DE7CD5400B6EBAB /* Words40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172491DE7CD5400B6EBAB /* Words40.plist */; };
+		4B7172991DE7CD5400B6EBAB /* Words41.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724A1DE7CD5400B6EBAB /* Words41.plist */; };
+		4B71729A1DE7CD5400B6EBAB /* Words42.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724B1DE7CD5400B6EBAB /* Words42.plist */; };
+		4B71729B1DE7CD5400B6EBAB /* Words43.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724C1DE7CD5400B6EBAB /* Words43.plist */; };
+		4B71729C1DE7CD5400B6EBAB /* Words44.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724D1DE7CD5400B6EBAB /* Words44.plist */; };
+		4B71729D1DE7CD5400B6EBAB /* Words45.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724E1DE7CD5400B6EBAB /* Words45.plist */; };
+		4B71729E1DE7CD5400B6EBAB /* Words46.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71724F1DE7CD5400B6EBAB /* Words46.plist */; };
+		4B71729F1DE7CD5400B6EBAB /* Words47.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172501DE7CD5400B6EBAB /* Words47.plist */; };
+		4B7172A01DE7CD5400B6EBAB /* Words48.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172511DE7CD5400B6EBAB /* Words48.plist */; };
+		4B7172A11DE7CD5400B6EBAB /* Words49.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172521DE7CD5400B6EBAB /* Words49.plist */; };
+		4B7172A21DE7CD5400B6EBAB /* Words50.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172531DE7CD5400B6EBAB /* Words50.plist */; };
+		4B7172A31DE7CD5400B6EBAB /* Words51.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172541DE7CD5400B6EBAB /* Words51.plist */; };
+		4B7172A41DE7CD5400B6EBAB /* Words52.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172551DE7CD5400B6EBAB /* Words52.plist */; };
+		4B7172A51DE7CD5400B6EBAB /* Words53.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172561DE7CD5400B6EBAB /* Words53.plist */; };
+		4B7172A61DE7CD5400B6EBAB /* Words54.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172571DE7CD5400B6EBAB /* Words54.plist */; };
+		4B7172A71DE7CD5400B6EBAB /* Words55.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172581DE7CD5400B6EBAB /* Words55.plist */; };
+		4B7172A81DE7CD5400B6EBAB /* Words56.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172591DE7CD5400B6EBAB /* Words56.plist */; };
+		4B7172A91DE7CD5400B6EBAB /* Words57.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725A1DE7CD5400B6EBAB /* Words57.plist */; };
+		4B7172AA1DE7CD5400B6EBAB /* Words58.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725B1DE7CD5400B6EBAB /* Words58.plist */; };
+		4B7172AB1DE7CD5400B6EBAB /* Words59.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725C1DE7CD5400B6EBAB /* Words59.plist */; };
+		4B7172AC1DE7CD5400B6EBAB /* Words60.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725D1DE7CD5400B6EBAB /* Words60.plist */; };
+		4B7172AD1DE7CD5400B6EBAB /* Words61.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725E1DE7CD5400B6EBAB /* Words61.plist */; };
+		4B7172AE1DE7CD5400B6EBAB /* Words62.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71725F1DE7CD5400B6EBAB /* Words62.plist */; };
+		4B7172AF1DE7CD5400B6EBAB /* Words63.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172601DE7CD5400B6EBAB /* Words63.plist */; };
+		4B7172B01DE7CD5400B6EBAB /* Words64.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172611DE7CD5400B6EBAB /* Words64.plist */; };
+		4B7172B11DE7CD5400B6EBAB /* Words65.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172621DE7CD5400B6EBAB /* Words65.plist */; };
+		4B7172B21DE7CD5400B6EBAB /* Words66.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172631DE7CD5400B6EBAB /* Words66.plist */; };
+		4B7172B31DE7CD5400B6EBAB /* Words67.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172641DE7CD5400B6EBAB /* Words67.plist */; };
+		4B7172B41DE7CD5400B6EBAB /* Words68.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172651DE7CD5400B6EBAB /* Words68.plist */; };
+		4B7172B51DE7CD5400B6EBAB /* Words69.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172661DE7CD5400B6EBAB /* Words69.plist */; };
+		4B7172B61DE7CD5400B6EBAB /* Words70.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172671DE7CD5400B6EBAB /* Words70.plist */; };
+		4B7172B71DE7CD5400B6EBAB /* Words71.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172681DE7CD5400B6EBAB /* Words71.plist */; };
+		4B7172B81DE7CD5400B6EBAB /* Words72.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172691DE7CD5400B6EBAB /* Words72.plist */; };
+		4B7172B91DE7CD5400B6EBAB /* Words73.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726A1DE7CD5400B6EBAB /* Words73.plist */; };
+		4B7172BA1DE7CD5400B6EBAB /* Words74.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726B1DE7CD5400B6EBAB /* Words74.plist */; };
+		4B7172BB1DE7CD5400B6EBAB /* Words75.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726C1DE7CD5400B6EBAB /* Words75.plist */; };
+		4B7172BC1DE7CD5400B6EBAB /* Words76.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726D1DE7CD5400B6EBAB /* Words76.plist */; };
+		4B7172BD1DE7CD5400B6EBAB /* Words77.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726E1DE7CD5400B6EBAB /* Words77.plist */; };
+		4B7172BE1DE7CD5400B6EBAB /* Words78.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B71726F1DE7CD5400B6EBAB /* Words78.plist */; };
+		4B7172BF1DE7CD5400B6EBAB /* Words79.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172701DE7CD5400B6EBAB /* Words79.plist */; };
+		4B7172C01DE7CD5400B6EBAB /* Words80.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172711DE7CD5400B6EBAB /* Words80.plist */; };
 		4BB4DF201DE58A51006C840A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF1F1DE58A51006C840A /* main.m */; };
 		4BB4DF2B1DE58A51006C840A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB4DF2A1DE58A51006C840A /* Assets.xcassets */; };
 		4BB4DF2E1DE58A51006C840A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB4DF2C1DE58A51006C840A /* LaunchScreen.storyboard */; };
@@ -24,10 +103,91 @@
 		4BB4DF641DE67825006C840A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF631DE67825006C840A /* MainViewController.m */; };
 		4BB4DF681DE67905006C840A /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF671DE67905006C840A /* BaseObject.m */; };
 		4BB4DF6B1DE6797B006C840A /* WordInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF6A1DE6797B006C840A /* WordInfo.m */; };
+		4BB4DF6D1DE6AB2D006C840A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB4DF6C1DE6AB2D006C840A /* AVFoundation.framework */; };
+		4BD25E891DE6C012005A7FF3 /* Words01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BD25E881DE6C012005A7FF3 /* Words01.plist */; };
 		897C3D4D517AD5F316A12130 /* libPods-RememberWord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D66BDBB53D696BF17A5AC40 /* libPods-RememberWord.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B7172231DE7CD5400B6EBAB /* Words02.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words02.plist; sourceTree = "<group>"; };
+		4B7172241DE7CD5400B6EBAB /* Words03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words03.plist; sourceTree = "<group>"; };
+		4B7172251DE7CD5400B6EBAB /* Words04.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words04.plist; sourceTree = "<group>"; };
+		4B7172261DE7CD5400B6EBAB /* Words05.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words05.plist; sourceTree = "<group>"; };
+		4B7172271DE7CD5400B6EBAB /* Words06.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words06.plist; sourceTree = "<group>"; };
+		4B7172281DE7CD5400B6EBAB /* Words07.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words07.plist; sourceTree = "<group>"; };
+		4B7172291DE7CD5400B6EBAB /* Words08.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words08.plist; sourceTree = "<group>"; };
+		4B71722A1DE7CD5400B6EBAB /* Words09.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words09.plist; sourceTree = "<group>"; };
+		4B71722B1DE7CD5400B6EBAB /* Words10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words10.plist; sourceTree = "<group>"; };
+		4B71722C1DE7CD5400B6EBAB /* Words11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words11.plist; sourceTree = "<group>"; };
+		4B71722D1DE7CD5400B6EBAB /* Words12.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words12.plist; sourceTree = "<group>"; };
+		4B71722E1DE7CD5400B6EBAB /* Words13.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words13.plist; sourceTree = "<group>"; };
+		4B71722F1DE7CD5400B6EBAB /* Words14.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words14.plist; sourceTree = "<group>"; };
+		4B7172301DE7CD5400B6EBAB /* Words15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words15.plist; sourceTree = "<group>"; };
+		4B7172311DE7CD5400B6EBAB /* Words16.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words16.plist; sourceTree = "<group>"; };
+		4B7172321DE7CD5400B6EBAB /* Words17.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words17.plist; sourceTree = "<group>"; };
+		4B7172331DE7CD5400B6EBAB /* Words18.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words18.plist; sourceTree = "<group>"; };
+		4B7172341DE7CD5400B6EBAB /* Words19.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words19.plist; sourceTree = "<group>"; };
+		4B7172351DE7CD5400B6EBAB /* Words20.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words20.plist; sourceTree = "<group>"; };
+		4B7172361DE7CD5400B6EBAB /* Words21.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words21.plist; sourceTree = "<group>"; };
+		4B7172371DE7CD5400B6EBAB /* Words22.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words22.plist; sourceTree = "<group>"; };
+		4B7172381DE7CD5400B6EBAB /* Words23.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words23.plist; sourceTree = "<group>"; };
+		4B7172391DE7CD5400B6EBAB /* Words24.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words24.plist; sourceTree = "<group>"; };
+		4B71723A1DE7CD5400B6EBAB /* Words25.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words25.plist; sourceTree = "<group>"; };
+		4B71723B1DE7CD5400B6EBAB /* Words26.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words26.plist; sourceTree = "<group>"; };
+		4B71723C1DE7CD5400B6EBAB /* Words27.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words27.plist; sourceTree = "<group>"; };
+		4B71723D1DE7CD5400B6EBAB /* Words28.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words28.plist; sourceTree = "<group>"; };
+		4B71723E1DE7CD5400B6EBAB /* Words29.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words29.plist; sourceTree = "<group>"; };
+		4B71723F1DE7CD5400B6EBAB /* Words30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words30.plist; sourceTree = "<group>"; };
+		4B7172401DE7CD5400B6EBAB /* Words31.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words31.plist; sourceTree = "<group>"; };
+		4B7172411DE7CD5400B6EBAB /* Words32.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words32.plist; sourceTree = "<group>"; };
+		4B7172421DE7CD5400B6EBAB /* Words33.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words33.plist; sourceTree = "<group>"; };
+		4B7172431DE7CD5400B6EBAB /* Words34.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words34.plist; sourceTree = "<group>"; };
+		4B7172441DE7CD5400B6EBAB /* Words35.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words35.plist; sourceTree = "<group>"; };
+		4B7172451DE7CD5400B6EBAB /* Words36.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words36.plist; sourceTree = "<group>"; };
+		4B7172461DE7CD5400B6EBAB /* Words37.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words37.plist; sourceTree = "<group>"; };
+		4B7172471DE7CD5400B6EBAB /* Words38.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words38.plist; sourceTree = "<group>"; };
+		4B7172481DE7CD5400B6EBAB /* Words39.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words39.plist; sourceTree = "<group>"; };
+		4B7172491DE7CD5400B6EBAB /* Words40.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words40.plist; sourceTree = "<group>"; };
+		4B71724A1DE7CD5400B6EBAB /* Words41.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words41.plist; sourceTree = "<group>"; };
+		4B71724B1DE7CD5400B6EBAB /* Words42.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words42.plist; sourceTree = "<group>"; };
+		4B71724C1DE7CD5400B6EBAB /* Words43.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words43.plist; sourceTree = "<group>"; };
+		4B71724D1DE7CD5400B6EBAB /* Words44.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words44.plist; sourceTree = "<group>"; };
+		4B71724E1DE7CD5400B6EBAB /* Words45.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words45.plist; sourceTree = "<group>"; };
+		4B71724F1DE7CD5400B6EBAB /* Words46.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words46.plist; sourceTree = "<group>"; };
+		4B7172501DE7CD5400B6EBAB /* Words47.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words47.plist; sourceTree = "<group>"; };
+		4B7172511DE7CD5400B6EBAB /* Words48.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words48.plist; sourceTree = "<group>"; };
+		4B7172521DE7CD5400B6EBAB /* Words49.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words49.plist; sourceTree = "<group>"; };
+		4B7172531DE7CD5400B6EBAB /* Words50.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words50.plist; sourceTree = "<group>"; };
+		4B7172541DE7CD5400B6EBAB /* Words51.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words51.plist; sourceTree = "<group>"; };
+		4B7172551DE7CD5400B6EBAB /* Words52.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words52.plist; sourceTree = "<group>"; };
+		4B7172561DE7CD5400B6EBAB /* Words53.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words53.plist; sourceTree = "<group>"; };
+		4B7172571DE7CD5400B6EBAB /* Words54.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words54.plist; sourceTree = "<group>"; };
+		4B7172581DE7CD5400B6EBAB /* Words55.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words55.plist; sourceTree = "<group>"; };
+		4B7172591DE7CD5400B6EBAB /* Words56.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words56.plist; sourceTree = "<group>"; };
+		4B71725A1DE7CD5400B6EBAB /* Words57.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words57.plist; sourceTree = "<group>"; };
+		4B71725B1DE7CD5400B6EBAB /* Words58.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words58.plist; sourceTree = "<group>"; };
+		4B71725C1DE7CD5400B6EBAB /* Words59.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words59.plist; sourceTree = "<group>"; };
+		4B71725D1DE7CD5400B6EBAB /* Words60.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words60.plist; sourceTree = "<group>"; };
+		4B71725E1DE7CD5400B6EBAB /* Words61.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words61.plist; sourceTree = "<group>"; };
+		4B71725F1DE7CD5400B6EBAB /* Words62.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words62.plist; sourceTree = "<group>"; };
+		4B7172601DE7CD5400B6EBAB /* Words63.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words63.plist; sourceTree = "<group>"; };
+		4B7172611DE7CD5400B6EBAB /* Words64.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words64.plist; sourceTree = "<group>"; };
+		4B7172621DE7CD5400B6EBAB /* Words65.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words65.plist; sourceTree = "<group>"; };
+		4B7172631DE7CD5400B6EBAB /* Words66.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words66.plist; sourceTree = "<group>"; };
+		4B7172641DE7CD5400B6EBAB /* Words67.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words67.plist; sourceTree = "<group>"; };
+		4B7172651DE7CD5400B6EBAB /* Words68.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words68.plist; sourceTree = "<group>"; };
+		4B7172661DE7CD5400B6EBAB /* Words69.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words69.plist; sourceTree = "<group>"; };
+		4B7172671DE7CD5400B6EBAB /* Words70.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words70.plist; sourceTree = "<group>"; };
+		4B7172681DE7CD5400B6EBAB /* Words71.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words71.plist; sourceTree = "<group>"; };
+		4B7172691DE7CD5400B6EBAB /* Words72.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words72.plist; sourceTree = "<group>"; };
+		4B71726A1DE7CD5400B6EBAB /* Words73.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words73.plist; sourceTree = "<group>"; };
+		4B71726B1DE7CD5400B6EBAB /* Words74.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words74.plist; sourceTree = "<group>"; };
+		4B71726C1DE7CD5400B6EBAB /* Words75.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words75.plist; sourceTree = "<group>"; };
+		4B71726D1DE7CD5400B6EBAB /* Words76.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words76.plist; sourceTree = "<group>"; };
+		4B71726E1DE7CD5400B6EBAB /* Words77.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words77.plist; sourceTree = "<group>"; };
+		4B71726F1DE7CD5400B6EBAB /* Words78.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words78.plist; sourceTree = "<group>"; };
+		4B7172701DE7CD5400B6EBAB /* Words79.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words79.plist; sourceTree = "<group>"; };
+		4B7172711DE7CD5400B6EBAB /* Words80.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words80.plist; sourceTree = "<group>"; };
 		4BB4DF1B1DE58A51006C840A /* RememberWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB4DF1F1DE58A51006C840A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BB4DF2A1DE58A51006C840A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +224,8 @@
 		4BB4DF671DE67905006C840A /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
 		4BB4DF691DE6797B006C840A /* WordInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordInfo.h; sourceTree = "<group>"; };
 		4BB4DF6A1DE6797B006C840A /* WordInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordInfo.m; sourceTree = "<group>"; };
+		4BB4DF6C1DE6AB2D006C840A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4BD25E881DE6C012005A7FF3 /* Words01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words01.plist; sourceTree = "<group>"; };
 		56DF4E7D202A75328F1CC2F1 /* Pods-RememberWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RememberWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RememberWord/Pods-RememberWord.debug.xcconfig"; sourceTree = "<group>"; };
 		5D66BDBB53D696BF17A5AC40 /* libPods-RememberWord.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RememberWord.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E864C26E98F282DF2C79FA2 /* Pods-RememberWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RememberWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-RememberWord/Pods-RememberWord.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BB4DF6D1DE6AB2D006C840A /* AVFoundation.framework in Frameworks */,
 				897C3D4D517AD5F316A12130 /* libPods-RememberWord.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +268,7 @@
 				4BB4DF351DE58D66006C840A /* Classes */,
 				4BB4DF3B1DE58D66006C840A /* ToolKit */,
 				4BB4DF3A1DE58D66006C840A /* Library */,
+				4BD25E871DE6C012005A7FF3 /* Assets */,
 				4BB4DF2A1DE58A51006C840A /* Assets.xcassets */,
 				4BB4DF2C1DE58A51006C840A /* LaunchScreen.storyboard */,
 				4BB4DF2F1DE58A51006C840A /* Info.plist */,
@@ -205,9 +369,97 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		4BD25E871DE6C012005A7FF3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4BD25E881DE6C012005A7FF3 /* Words01.plist */,
+				4B7172231DE7CD5400B6EBAB /* Words02.plist */,
+				4B7172241DE7CD5400B6EBAB /* Words03.plist */,
+				4B7172251DE7CD5400B6EBAB /* Words04.plist */,
+				4B7172261DE7CD5400B6EBAB /* Words05.plist */,
+				4B7172271DE7CD5400B6EBAB /* Words06.plist */,
+				4B7172281DE7CD5400B6EBAB /* Words07.plist */,
+				4B7172291DE7CD5400B6EBAB /* Words08.plist */,
+				4B71722A1DE7CD5400B6EBAB /* Words09.plist */,
+				4B71722B1DE7CD5400B6EBAB /* Words10.plist */,
+				4B71722C1DE7CD5400B6EBAB /* Words11.plist */,
+				4B71722D1DE7CD5400B6EBAB /* Words12.plist */,
+				4B71722E1DE7CD5400B6EBAB /* Words13.plist */,
+				4B71722F1DE7CD5400B6EBAB /* Words14.plist */,
+				4B7172301DE7CD5400B6EBAB /* Words15.plist */,
+				4B7172311DE7CD5400B6EBAB /* Words16.plist */,
+				4B7172321DE7CD5400B6EBAB /* Words17.plist */,
+				4B7172331DE7CD5400B6EBAB /* Words18.plist */,
+				4B7172341DE7CD5400B6EBAB /* Words19.plist */,
+				4B7172351DE7CD5400B6EBAB /* Words20.plist */,
+				4B7172361DE7CD5400B6EBAB /* Words21.plist */,
+				4B7172371DE7CD5400B6EBAB /* Words22.plist */,
+				4B7172381DE7CD5400B6EBAB /* Words23.plist */,
+				4B7172391DE7CD5400B6EBAB /* Words24.plist */,
+				4B71723A1DE7CD5400B6EBAB /* Words25.plist */,
+				4B71723B1DE7CD5400B6EBAB /* Words26.plist */,
+				4B71723C1DE7CD5400B6EBAB /* Words27.plist */,
+				4B71723D1DE7CD5400B6EBAB /* Words28.plist */,
+				4B71723E1DE7CD5400B6EBAB /* Words29.plist */,
+				4B71723F1DE7CD5400B6EBAB /* Words30.plist */,
+				4B7172401DE7CD5400B6EBAB /* Words31.plist */,
+				4B7172411DE7CD5400B6EBAB /* Words32.plist */,
+				4B7172421DE7CD5400B6EBAB /* Words33.plist */,
+				4B7172431DE7CD5400B6EBAB /* Words34.plist */,
+				4B7172441DE7CD5400B6EBAB /* Words35.plist */,
+				4B7172451DE7CD5400B6EBAB /* Words36.plist */,
+				4B7172461DE7CD5400B6EBAB /* Words37.plist */,
+				4B7172471DE7CD5400B6EBAB /* Words38.plist */,
+				4B7172481DE7CD5400B6EBAB /* Words39.plist */,
+				4B7172491DE7CD5400B6EBAB /* Words40.plist */,
+				4B71724A1DE7CD5400B6EBAB /* Words41.plist */,
+				4B71724B1DE7CD5400B6EBAB /* Words42.plist */,
+				4B71724C1DE7CD5400B6EBAB /* Words43.plist */,
+				4B71724D1DE7CD5400B6EBAB /* Words44.plist */,
+				4B71724E1DE7CD5400B6EBAB /* Words45.plist */,
+				4B71724F1DE7CD5400B6EBAB /* Words46.plist */,
+				4B7172501DE7CD5400B6EBAB /* Words47.plist */,
+				4B7172511DE7CD5400B6EBAB /* Words48.plist */,
+				4B7172521DE7CD5400B6EBAB /* Words49.plist */,
+				4B7172531DE7CD5400B6EBAB /* Words50.plist */,
+				4B7172541DE7CD5400B6EBAB /* Words51.plist */,
+				4B7172551DE7CD5400B6EBAB /* Words52.plist */,
+				4B7172561DE7CD5400B6EBAB /* Words53.plist */,
+				4B7172571DE7CD5400B6EBAB /* Words54.plist */,
+				4B7172581DE7CD5400B6EBAB /* Words55.plist */,
+				4B7172591DE7CD5400B6EBAB /* Words56.plist */,
+				4B71725A1DE7CD5400B6EBAB /* Words57.plist */,
+				4B71725B1DE7CD5400B6EBAB /* Words58.plist */,
+				4B71725C1DE7CD5400B6EBAB /* Words59.plist */,
+				4B71725D1DE7CD5400B6EBAB /* Words60.plist */,
+				4B71725E1DE7CD5400B6EBAB /* Words61.plist */,
+				4B71725F1DE7CD5400B6EBAB /* Words62.plist */,
+				4B7172601DE7CD5400B6EBAB /* Words63.plist */,
+				4B7172611DE7CD5400B6EBAB /* Words64.plist */,
+				4B7172621DE7CD5400B6EBAB /* Words65.plist */,
+				4B7172631DE7CD5400B6EBAB /* Words66.plist */,
+				4B7172641DE7CD5400B6EBAB /* Words67.plist */,
+				4B7172651DE7CD5400B6EBAB /* Words68.plist */,
+				4B7172661DE7CD5400B6EBAB /* Words69.plist */,
+				4B7172671DE7CD5400B6EBAB /* Words70.plist */,
+				4B7172681DE7CD5400B6EBAB /* Words71.plist */,
+				4B7172691DE7CD5400B6EBAB /* Words72.plist */,
+				4B71726A1DE7CD5400B6EBAB /* Words73.plist */,
+				4B71726B1DE7CD5400B6EBAB /* Words74.plist */,
+				4B71726C1DE7CD5400B6EBAB /* Words75.plist */,
+				4B71726D1DE7CD5400B6EBAB /* Words76.plist */,
+				4B71726E1DE7CD5400B6EBAB /* Words77.plist */,
+				4B71726F1DE7CD5400B6EBAB /* Words78.plist */,
+				4B7172701DE7CD5400B6EBAB /* Words79.plist */,
+				4B7172711DE7CD5400B6EBAB /* Words80.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		6032488B04DB1595CFCC175B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BB4DF6C1DE6AB2D006C840A /* AVFoundation.framework */,
 				5D66BDBB53D696BF17A5AC40 /* libPods-RememberWord.a */,
 			);
 			name = Frameworks;
@@ -256,7 +508,7 @@
 				TargetAttributes = {
 					4BB4DF1A1DE58A51006C840A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = A4B8PN9SL4;
+						DevelopmentTeam = GKWHD25FKR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -284,8 +536,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B71729E1DE7CD5400B6EBAB /* Words46.plist in Resources */,
+				4B7172A81DE7CD5400B6EBAB /* Words56.plist in Resources */,
+				4B7172721DE7CD5400B6EBAB /* Words02.plist in Resources */,
+				4B7172AF1DE7CD5400B6EBAB /* Words63.plist in Resources */,
+				4B7172A71DE7CD5400B6EBAB /* Words55.plist in Resources */,
+				4B7172751DE7CD5400B6EBAB /* Words05.plist in Resources */,
+				4B7172A21DE7CD5400B6EBAB /* Words50.plist in Resources */,
+				4B7172BB1DE7CD5400B6EBAB /* Words75.plist in Resources */,
+				4B7172771DE7CD5400B6EBAB /* Words07.plist in Resources */,
+				4B7172B41DE7CD5400B6EBAB /* Words68.plist in Resources */,
+				4B7172731DE7CD5400B6EBAB /* Words03.plist in Resources */,
+				4B7172AD1DE7CD5400B6EBAB /* Words61.plist in Resources */,
+				4B7172741DE7CD5400B6EBAB /* Words04.plist in Resources */,
+				4B7172BC1DE7CD5400B6EBAB /* Words76.plist in Resources */,
+				4B7172A61DE7CD5400B6EBAB /* Words54.plist in Resources */,
+				4B7172761DE7CD5400B6EBAB /* Words06.plist in Resources */,
+				4B71729C1DE7CD5400B6EBAB /* Words44.plist in Resources */,
+				4B7172971DE7CD5400B6EBAB /* Words39.plist in Resources */,
+				4B7172991DE7CD5400B6EBAB /* Words41.plist in Resources */,
+				4B7172951DE7CD5400B6EBAB /* Words37.plist in Resources */,
+				4B7172781DE7CD5400B6EBAB /* Words08.plist in Resources */,
+				4B7172831DE7CD5400B6EBAB /* Words19.plist in Resources */,
+				4B7172961DE7CD5400B6EBAB /* Words38.plist in Resources */,
+				4B71727C1DE7CD5400B6EBAB /* Words12.plist in Resources */,
+				4B7172B91DE7CD5400B6EBAB /* Words73.plist in Resources */,
+				4B71727A1DE7CD5400B6EBAB /* Words10.plist in Resources */,
+				4B7172A41DE7CD5400B6EBAB /* Words52.plist in Resources */,
+				4B71728C1DE7CD5400B6EBAB /* Words28.plist in Resources */,
+				4B7172861DE7CD5400B6EBAB /* Words22.plist in Resources */,
+				4B7172AA1DE7CD5400B6EBAB /* Words58.plist in Resources */,
+				4B7172AC1DE7CD5400B6EBAB /* Words60.plist in Resources */,
+				4B71728B1DE7CD5400B6EBAB /* Words27.plist in Resources */,
+				4B7172791DE7CD5400B6EBAB /* Words09.plist in Resources */,
+				4B7172911DE7CD5400B6EBAB /* Words33.plist in Resources */,
+				4B71727D1DE7CD5400B6EBAB /* Words13.plist in Resources */,
+				4B7172AE1DE7CD5400B6EBAB /* Words62.plist in Resources */,
+				4B71728F1DE7CD5400B6EBAB /* Words31.plist in Resources */,
+				4B7172BE1DE7CD5400B6EBAB /* Words78.plist in Resources */,
+				4B7172891DE7CD5400B6EBAB /* Words25.plist in Resources */,
+				4B7172B21DE7CD5400B6EBAB /* Words66.plist in Resources */,
+				4B7172931DE7CD5400B6EBAB /* Words35.plist in Resources */,
+				4B7172B61DE7CD5400B6EBAB /* Words70.plist in Resources */,
+				4B7172C01DE7CD5400B6EBAB /* Words80.plist in Resources */,
+				4B7172941DE7CD5400B6EBAB /* Words36.plist in Resources */,
+				4B7172BD1DE7CD5400B6EBAB /* Words77.plist in Resources */,
+				4B71729B1DE7CD5400B6EBAB /* Words43.plist in Resources */,
+				4B7172B31DE7CD5400B6EBAB /* Words67.plist in Resources */,
+				4B7172BF1DE7CD5400B6EBAB /* Words79.plist in Resources */,
+				4B7172A11DE7CD5400B6EBAB /* Words49.plist in Resources */,
+				4B71727E1DE7CD5400B6EBAB /* Words14.plist in Resources */,
+				4B71727B1DE7CD5400B6EBAB /* Words11.plist in Resources */,
+				4B71729F1DE7CD5400B6EBAB /* Words47.plist in Resources */,
+				4B7172A51DE7CD5400B6EBAB /* Words53.plist in Resources */,
+				4B7172841DE7CD5400B6EBAB /* Words20.plist in Resources */,
+				4B7172801DE7CD5400B6EBAB /* Words16.plist in Resources */,
+				4BD25E891DE6C012005A7FF3 /* Words01.plist in Resources */,
+				4B7172821DE7CD5400B6EBAB /* Words18.plist in Resources */,
+				4B7172901DE7CD5400B6EBAB /* Words32.plist in Resources */,
 				4BB4DF2E1DE58A51006C840A /* LaunchScreen.storyboard in Resources */,
+				4B71729A1DE7CD5400B6EBAB /* Words42.plist in Resources */,
+				4B7172871DE7CD5400B6EBAB /* Words23.plist in Resources */,
+				4B7172B01DE7CD5400B6EBAB /* Words64.plist in Resources */,
+				4B7172A91DE7CD5400B6EBAB /* Words57.plist in Resources */,
+				4B71728A1DE7CD5400B6EBAB /* Words26.plist in Resources */,
+				4B71728E1DE7CD5400B6EBAB /* Words30.plist in Resources */,
+				4B71729D1DE7CD5400B6EBAB /* Words45.plist in Resources */,
+				4B7172B81DE7CD5400B6EBAB /* Words72.plist in Resources */,
+				4B7172BA1DE7CD5400B6EBAB /* Words74.plist in Resources */,
+				4B7172B51DE7CD5400B6EBAB /* Words69.plist in Resources */,
+				4B7172A31DE7CD5400B6EBAB /* Words51.plist in Resources */,
 				4BB4DF2B1DE58A51006C840A /* Assets.xcassets in Resources */,
+				4B71728D1DE7CD5400B6EBAB /* Words29.plist in Resources */,
+				4B7172981DE7CD5400B6EBAB /* Words40.plist in Resources */,
+				4B7172A01DE7CD5400B6EBAB /* Words48.plist in Resources */,
+				4B7172881DE7CD5400B6EBAB /* Words24.plist in Resources */,
+				4B7172851DE7CD5400B6EBAB /* Words21.plist in Resources */,
+				4B7172AB1DE7CD5400B6EBAB /* Words59.plist in Resources */,
+				4B7172B71DE7CD5400B6EBAB /* Words71.plist in Resources */,
+				4B7172921DE7CD5400B6EBAB /* Words34.plist in Resources */,
+				4B7172811DE7CD5400B6EBAB /* Words17.plist in Resources */,
+				4B71727F1DE7CD5400B6EBAB /* Words15.plist in Resources */,
+				4B7172B11DE7CD5400B6EBAB /* Words65.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +801,7 @@
 			baseConfigurationReference = 56DF4E7D202A75328F1CC2F1 /* Pods-RememberWord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A4B8PN9SL4;
+				DEVELOPMENT_TEAM = GKWHD25FKR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RememberWord/Prefix.pch;
 				INFOPLIST_FILE = RememberWord/Info.plist;
@@ -485,7 +817,7 @@
 			baseConfigurationReference = 5E864C26E98F282DF2C79FA2 /* Pods-RememberWord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A4B8PN9SL4;
+				DEVELOPMENT_TEAM = GKWHD25FKR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RememberWord/Prefix.pch;
 				INFOPLIST_FILE = RememberWord/Info.plist;

@@ -8,12 +8,15 @@
 
 #import "MainViewController.h"
 #import "WordInfo.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MainViewController () <UIScrollViewDelegate> {
     UIScrollView *_contentScrollView;
     UILabel *_labelProgress;
-    NSMutableArray *_wrods;
+    NSMutableArray *_words;
     int _index;
+    AVSpeechSynthesizer *_synthesizer;
+    UISwitch *_switchAuto;
 }
 
 @end
@@ -31,7 +34,8 @@
     _contentScrollView.layer.borderColor = [UIColor grayColor].CGColor;
     [self.view addSubview:_contentScrollView];
     [_contentScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY).offset(-50);
         make.width.equalTo(self.view.mas_width).offset(-40);
         make.height.equalTo(_contentScrollView.mas_width);
     }];
@@ -44,22 +48,114 @@
         make.bottom.equalTo(_contentScrollView.mas_bottom).offset(-10);
         make.trailing.equalTo(_contentScrollView.mas_trailing).offset(-10);
     }];
+    
+    UIButton *buttonSpeech = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonSpeech setTitle:@"朗读" forState:UIControlStateNormal];
+    buttonSpeech.titleLabel.font = [UIFont systemFontOfSize:15];
+    [buttonSpeech setTitleColor:UIColorFromRGB(0x333333) forState:UIControlStateNormal];
+    [buttonSpeech setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    [buttonSpeech addTarget:self action:@selector(buttonSpeechClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonSpeech addTarget:self action:@selector(buttonTouchDown:) forControlEvents:UIControlEventTouchDown];
+    [buttonSpeech addTarget:self action:@selector(buttonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+    buttonSpeech.layer.borderWidth = 1;
+    buttonSpeech.layer.borderColor = UIColorFromRGB(0x333333).CGColor;
+    buttonSpeech.layer.cornerRadius = 22;
+    [self.view addSubview:buttonSpeech];
+    [buttonSpeech mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_contentScrollView.mas_bottom).offset(20);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(44);
+    }];
+    
+    UIButton *buttonInfo = [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonInfo setTitle:@"使用说明" forState:UIControlStateNormal];
+    buttonInfo.titleLabel.font = [UIFont systemFontOfSize:15];
+    [buttonInfo setTitleColor:UIColorFromRGB(0x333333) forState:UIControlStateNormal];
+    [buttonInfo setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
+    [buttonInfo addTarget:self action:@selector(buttonSpeechClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [buttonInfo addTarget:self action:@selector(buttonTouchDown:) forControlEvents:UIControlEventTouchDown];
+    [buttonInfo addTarget:self action:@selector(buttonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+    buttonInfo.layer.borderWidth = 1;
+    buttonInfo.layer.borderColor = UIColorFromRGB(0x333333).CGColor;
+    buttonInfo.layer.cornerRadius = 22;
+    [self.view addSubview:buttonInfo];
+    [buttonInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(20);
+        make.bottom.mas_equalTo(-20);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(44);
+    }];
+    
+    _switchAuto = [[UISwitch alloc] init];
+    _switchAuto.on = NO;
+    [_switchAuto addTarget:self action:@selector(switchAutoValueChanged) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_switchAuto];
+    [_switchAuto mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(-20);
+        make.bottom.mas_equalTo(-20);
+    }];
+    
+    UILabel *labelAuto = [[UILabel alloc] init];
+    labelAuto.textColor = UIColorFromRGB(0x333333);
+    labelAuto.font = [UIFont systemFontOfSize:15];
+    labelAuto.text = @"自动朗读:";
+    [self.view addSubview:labelAuto];
+    [labelAuto mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.trailing.equalTo(_switchAuto.mas_leading).offset(-5);
+        make.centerY.equalTo(_switchAuto.mas_centerY);
+    }];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _wrods = [NSMutableArray array];
+    _words = [NSMutableArray array];
+    _synthesizer = [[AVSpeechSynthesizer alloc] init];
     
     [self loadWords];
     [self showWords];
+    
+//    for (AVSpeechSynthesisVoice *voice in [AVSpeechSynthesisVoice speechVoices]) {
+//        DLOG(@"%@ %@", voice.language, voice.identifier);
+//    }
 }
 
 #pragma mark - Private methods
 
+- (void)switchAutoValueChanged {
+    if (_switchAuto.isOn) {
+        [self buttonSpeechClicked:nil];
+    }
+}
+
+- (void)buttonInfoClicked:(UIButton *)button {
+    button.layer.borderColor = UIColorFromRGB(0x333333).CGColor;
+}
+
+- (void)buttonSpeechClicked:(UIButton *)button {
+    button.layer.borderColor = UIColorFromRGB(0x333333).CGColor;
+    
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    
+    WordInfo *wInfo = [_words objectAtIndex:_index-1];
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:wInfo.word];
+    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
+    [_synthesizer speakUtterance:utterance];
+}
+
+- (void)buttonTouchDown:(UIButton *)button {
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+}
+
+- (void)buttonTouchUpOutside:(UIButton *)button {
+    button.layer.borderColor = UIColorFromRGB(0x333333).CGColor;
+}
+
 - (void)showWords {
     UIView *lastContentView = nil;
-    for (int i = 0; i < _wrods.count; i++) {
-        WordInfo *wInfo = [_wrods objectAtIndex:i];
+    for (int i = 0; i < _words.count; i++) {
+        WordInfo *wInfo = [_words objectAtIndex:i];
         
         UIView *contentView = [[UIView alloc] init];
         [_contentScrollView addSubview:contentView];
@@ -71,7 +167,7 @@
             }
             make.top.mas_equalTo(0);
             make.width.height.equalTo(_contentScrollView);
-            if (i == _wrods.count - 1) {
+            if (i == _words.count - 1) {
                 make.right.mas_equalTo(0);
             }
         }];
@@ -116,129 +212,24 @@
     }
     
     _index = 1;
-    _labelProgress.text = [NSString stringWithFormat:@"%d/%d", _index, (int)_wrods.count];
+    _labelProgress.text = [NSString stringWithFormat:@"%d/%d", _index, (int)_words.count];
 }
 
 - (void)loadWords {
-    WordInfo *wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"emperor";
-    wInfo.phoneticSymbol = @"/'empərə/";
-    wInfo.translation = @"n. 皇帝，君主";
-    [_wrods addObject:wInfo];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Words01" ofType:@"plist"];
+    NSArray *array = [NSArray arrayWithContentsOfFile:path];
     
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"exact";
-    wInfo.phoneticSymbol = @"/ɪg'zækt/";
-    wInfo.translation = @"adj. 精确的；准确的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"traditional";
-    wInfo.phoneticSymbol = @"/trə'dɪʃənl/";
-    wInfo.translation = @"adj. 传统的，惯例的；口传的，传说的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"lack";
-    wInfo.phoneticSymbol = @"/læk/";
-    wInfo.translation = @"n./vi. 缺乏；不足；没有";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"pardon";
-    wInfo.phoneticSymbol = @"/'pɑːdn/";
-    wInfo.translation = @"excl. (用于请求别人重复某事)什么，请再说一遍 n./vt. 原谅；宽恕；赦免";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"regent";
-    wInfo.phoneticSymbol = @"/'riːdʒnt/";
-    wInfo.translation = @"n. 摄政者(代国王统治者)";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"burgeon";
-    wInfo.phoneticSymbol = @"/'bɜːdʒən/";
-    wInfo.translation = @"vi. 迅速成长；发展";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"argue";
-    wInfo.phoneticSymbol = @"/'ɑːgjuː/";
-    wInfo.translation = @"v. 争论；说服";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"barely";
-    wInfo.phoneticSymbol = @"/'beəlɪ/";
-    wInfo.translation = @"adv. 仅仅，几乎不；赤裸裸地，无遮蔽地";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"methane";
-    wInfo.phoneticSymbol = @"/'miːθeɪn/";
-    wInfo.translation = @"n. 甲烷；沼气";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"hierarchy";
-    wInfo.phoneticSymbol = @"/'haɪərɑːkɪ/";
-    wInfo.translation = @"n. 领导层；层次，等级";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"guidance";
-    wInfo.phoneticSymbol = @"/'gaɪdns/";
-    wInfo.translation = @"n. 指引；指导";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"easy-going";
-    wInfo.phoneticSymbol = @"/'i:ziˌɡəuiŋ/";
-    wInfo.translation = @"adj. 脾气随和的；温和的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"electrical";
-    wInfo.phoneticSymbol = @"/ɪ'lektrɪkl/";
-    wInfo.translation = @"adj. 电的，电学的，有关电的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"electronic";
-    wInfo.phoneticSymbol = @"/ɪlek'trɒnɪk/";
-    wInfo.translation = @"adj. 电子的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"roll film";
-    wInfo.phoneticSymbol = @"";
-    wInfo.translation = @"胶卷";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"philosophy";
-    wInfo.phoneticSymbol = @"/fi'lɔsəfi/";
-    wInfo.translation = @"n. 哲学；哲理";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"chronic";
-    wInfo.phoneticSymbol = @"/'krɒnɪk/";
-    wInfo.translation = @"adj. (疾病)慢性的；积习难改的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"desirable";
-    wInfo.phoneticSymbol = @"/dɪ'zaɪərəbl/";
-    wInfo.translation = @"adj. 可取的，值得拥有的，合意的";
-    [_wrods addObject:wInfo];
-    
-    wInfo = [[WordInfo alloc] init];
-    wInfo.word = @"consortium";
-    wInfo.phoneticSymbol = @"/kən'sɔːtɪəm/";
-    wInfo.translation = @"n. 集团；财团；社团；协会";
-    [_wrods addObject:wInfo];
+    for (int i = 0; i < 20; i++) {
+        NSDictionary *dict = [array objectAtIndex:i];
+        WordInfo *wInfo = [[WordInfo alloc] init];
+        wInfo.word = [dict objectForKey:@"word"];
+        wInfo.phoneticSymbol = [dict objectForKey:@"phoneticSymbol"];
+        NSString *oldString = [dict objectForKey:@"translation"];
+        NSString *newString = [oldString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+        wInfo.translation = newString;
+        
+        [_words addObject:wInfo];
+    }
 }
 
 
@@ -248,7 +239,11 @@
     // circular and infinite UIScrollView: 3-1-2-3-1
     if (scrollView == _contentScrollView) {
         _index = 1 + roundf(_contentScrollView.contentOffset.x / (_contentScrollView.frame.size.width));
-        _labelProgress.text = [NSString stringWithFormat:@"%d/%d", _index, (int)_wrods.count];
+        _labelProgress.text = [NSString stringWithFormat:@"%d/%d", _index, (int)_words.count];
+        
+        if (_switchAuto.isOn) {
+            [self buttonSpeechClicked:nil];
+        }
     }
 }
 
