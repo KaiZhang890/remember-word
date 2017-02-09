@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+//#import "MainViewController.h"
+#import "ShowPageViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,18 +16,24 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    MainViewController *vc = [[MainViewController alloc] init];
+    /*
+     10次 6-7分钟，400秒
+     每次200个单词
+     周一到周五，1000个单词
+     周六，周日复习
+     */
+    
+//    MainViewController *vc = [[MainViewController alloc] init];
+    ShowPageViewController *vc = [[ShowPageViewController alloc] init];
     _window.rootViewController = vc;
     
     [_window makeKeyAndVisible];
     return YES;
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B16ED161E4AC68A00DB396B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED151E4AC68A00DB396B /* BaseView.m */; };
+		4B16ED191E4AC6B800DB396B /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED181E4AC6B800DB396B /* PageView.m */; };
+		4B16ED1C1E4AC7BA00DB396B /* ShowPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */; };
+		4B16ED1F1E4ADDAD00DB396B /* WordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED1E1E4ADDAD00DB396B /* WordView.m */; };
 		4B7172721DE7CD5400B6EBAB /* Words02.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172231DE7CD5400B6EBAB /* Words02.plist */; };
 		4B7172731DE7CD5400B6EBAB /* Words03.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172241DE7CD5400B6EBAB /* Words03.plist */; };
 		4B7172741DE7CD5400B6EBAB /* Words04.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172251DE7CD5400B6EBAB /* Words04.plist */; };
@@ -109,6 +113,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B16ED141E4AC68A00DB396B /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		4B16ED151E4AC68A00DB396B /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		4B16ED171E4AC6B800DB396B /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		4B16ED181E4AC6B800DB396B /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
+		4B16ED1A1E4AC7BA00DB396B /* ShowPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPageViewController.h; sourceTree = "<group>"; };
+		4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPageViewController.m; sourceTree = "<group>"; };
+		4B16ED1D1E4ADDAD00DB396B /* WordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordView.h; sourceTree = "<group>"; };
+		4B16ED1E1E4ADDAD00DB396B /* WordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordView.m; sourceTree = "<group>"; };
 		4B7172231DE7CD5400B6EBAB /* Words02.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words02.plist; sourceTree = "<group>"; };
 		4B7172241DE7CD5400B6EBAB /* Words03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words03.plist; sourceTree = "<group>"; };
 		4B7172251DE7CD5400B6EBAB /* Words04.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words04.plist; sourceTree = "<group>"; };
@@ -244,6 +256,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B16ED131E4AC66500DB396B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B16ED141E4AC68A00DB396B /* BaseView.h */,
+				4B16ED151E4AC68A00DB396B /* BaseView.m */,
+				4B16ED1D1E4ADDAD00DB396B /* WordView.h */,
+				4B16ED1E1E4ADDAD00DB396B /* WordView.m */,
+				4B16ED171E4AC6B800DB396B /* PageView.h */,
+				4B16ED181E4AC6B800DB396B /* PageView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		4BB4DF121DE58A51006C840A = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +318,7 @@
 				4BB4DF361DE58D66006C840A /* AppDelegate.h */,
 				4BB4DF371DE58D66006C840A /* AppDelegate.m */,
 				4BB4DF651DE678F9006C840A /* Models */,
+				4B16ED131E4AC66500DB396B /* Views */,
 				4BB4DF5B1DE677E8006C840A /* ViewControllers */,
 			);
 			path = Classes;
@@ -354,6 +380,8 @@
 				4BB4DF601DE6780C006C840A /* CustomNavigationController.m */,
 				4BB4DF621DE67825006C840A /* MainViewController.h */,
 				4BB4DF631DE67825006C840A /* MainViewController.m */,
+				4B16ED1A1E4AC7BA00DB396B /* ShowPageViewController.h */,
+				4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -503,7 +531,7 @@
 		4BB4DF131DE58A51006C840A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Calle Zhang";
 				TargetAttributes = {
 					4BB4DF1A1DE58A51006C840A = {
@@ -680,6 +708,7 @@
 				4BB4DF5E1DE677FA006C840A /* BaseViewController.m in Sources */,
 				4BB4DF571DE58D66006C840A /* JSONUtil.m in Sources */,
 				4BB4DF521DE58D66006C840A /* UIImage+FX.m in Sources */,
+				4B16ED1C1E4AC7BA00DB396B /* ShowPageViewController.m in Sources */,
 				4BB4DF531DE58D66006C840A /* UIImageView+Rotate.m in Sources */,
 				4BB4DF551DE58D66006C840A /* UIViewController+DismissKeyboard.m in Sources */,
 				4BB4DF541DE58D66006C840A /* UIView+Frame.m in Sources */,
@@ -687,8 +716,11 @@
 				4BB4DF4F1DE58D66006C840A /* AppDelegate.m in Sources */,
 				4BB4DF581DE58D66006C840A /* UIPlaceHolderTextView.m in Sources */,
 				4BB4DF681DE67905006C840A /* BaseObject.m in Sources */,
+				4B16ED161E4AC68A00DB396B /* BaseView.m in Sources */,
 				4BB4DF611DE6780C006C840A /* CustomNavigationController.m in Sources */,
 				4BB4DF641DE67825006C840A /* MainViewController.m in Sources */,
+				4B16ED191E4AC6B800DB396B /* PageView.m in Sources */,
+				4B16ED1F1E4ADDAD00DB396B /* WordView.m in Sources */,
 				4BB4DF201DE58A51006C840A /* main.m in Sources */,
 				4BB4DF511DE58D66006C840A /* NSString+Helper.m in Sources */,
 			);
@@ -726,6 +758,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -773,6 +806,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
