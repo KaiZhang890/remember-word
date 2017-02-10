@@ -13,6 +13,9 @@
 - (instancetype)initWithWord:(WordInfo *)word {
     if (self = [super init]) {
         UIFont *font = [UIFont systemFontOfSize:15];
+        if (WinSize.height == 568) { // iPhone 5, iPhoen SE
+            font = [UIFont systemFontOfSize:14];
+        }
         CGFloat offsetLeft = 110;
         
         _labelWord = [[UILabel alloc] init];

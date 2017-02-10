@@ -9,7 +9,12 @@
 #import "ShowPageViewController.h"
 #import "PageView.h"
 
-@interface ShowPageViewController ()
+#define TagPagesView 100
+
+@interface ShowPageViewController () <UIScrollViewDelegate> {
+    UIScrollView *_scrollView;
+    int _pageCount;
+}
 
 @end
 
@@ -81,28 +86,33 @@
         make.centerY.equalTo(labelSound.mas_centerY);
     }];
     
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
-    scrollView.pagingEnabled = YES;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    [self.view addSubview:scrollView];
-    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+    _scrollView = [[UIScrollView alloc] init];
+    _scrollView.delegate = self;
+    _scrollView.pagingEnabled = YES;
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:_scrollView];
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(labelSound.mas_bottom).offset(20);
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-40);
     }];
     
     UIView *pagesView = [[UIView alloc] init];
-    [scrollView addSubview:pagesView];
+    pagesView.tag = TagPagesView;
+    [_scrollView addSubview:pagesView];
+    
     [pagesView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(scrollView);
-        make.centerY.equalTo(scrollView);
+        make.edges.equalTo(_scrollView);
+        make.centerY.equalTo(_scrollView);
     }];
     
     PageView *lastView = nil;
-    for (int i = 0; i < 20; i++) {
-        NSArray *words = [self loadWordsWithOffset:i * 5 count:5];
+    _pageCount = 200;
+    for (int i = 0; i < 3; i++) {
+        NSArray *words = [self loadWordsWithPage:i];
+        
         PageView *pView = [[PageView alloc] initWithWords:words selectIndex:0];
-        pView.labelPage.text = [NSString stringWithFormat:@"Page %d of %d", i+1, 20];
+        pView.labelPage.text = [NSString stringWithFormat:@"Page %d of %d", i+1, _pageCount];
         [pagesView addSubview:pView];
         [pView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.equalTo(pagesView);
@@ -111,39 +121,143 @@
             } else {
                 make.left.equalTo(pagesView).offset(10);
             }
-            make.width.equalTo(self.view).offset(-20);
+            make.width.equalTo(_scrollView).offset(-20);
         }];
-        
+
         lastView = pView;
     }
     
-    [pagesView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(lastView.mas_right).offset(10);
+    [lastView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(pagesView.mas_right).offset(-10);
     }];
 }
 
 #pragma mark - Private methods
 
-- (NSArray *)loadWordsWithOffset:(int)offset count:(int)count {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Words01" ofType:@"plist"];
-    NSArray *array = [NSArray arrayWithContentsOfFile:path];
+- (NSArray *)loadWordsWithPage:(int)page {
+    NSAssert(page >= 0, @"page is %d, should >= 0", page);
+    int count = 5; // 5 words each page
+    int offset = page * count;
     NSMutableArray *words = [NSMutableArray array];
-    int limit = offset + count;
-    for (int i = offset; i < limit; i++) {
-        if (i < array.count) {
-            NSDictionary *dict = [array objectAtIndex:i];
-            WordInfo *wInfo = [[WordInfo alloc] init];
-            wInfo.word = [dict objectForKey:@"word"];
-            wInfo.phoneticSymbol = [dict objectForKey:@"phoneticSymbol"];
-            NSString *oldString = [dict objectForKey:@"translation"];
-            NSString *newString = [oldString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
-            wInfo.translation = newString;
-            
-            [words addObject:wInfo];
+    // not consider cross plist files
+    NSString *path = nil;
+    if (offset < 100) {
+        path = [[NSBundle mainBundle] pathForResource:@"Words01" ofType:@"plist"];
+    } else if (offset < 200) {
+        offset -= 100;
+        path = [[NSBundle mainBundle] pathForResource:@"Words02" ofType:@"plist"];
+    } else if (offset < 300) {
+        offset -= 200;
+        path = [[NSBundle mainBundle] pathForResource:@"Words03" ofType:@"plist"];
+    } else if (offset < 400) {
+        offset -= 300;
+        path = [[NSBundle mainBundle] pathForResource:@"Words04" ofType:@"plist"];
+    } else if (offset < 500) {
+        offset -= 400;
+        path = [[NSBundle mainBundle] pathForResource:@"Words05" ofType:@"plist"];
+    } else if (offset < 600) {
+        offset -= 500;
+        path = [[NSBundle mainBundle] pathForResource:@"Words06" ofType:@"plist"];
+    } else if (offset < 700) {
+        offset -= 600;
+        path = [[NSBundle mainBundle] pathForResource:@"Words07" ofType:@"plist"];
+    } else if (offset < 800) {
+        offset -= 700;
+        path = [[NSBundle mainBundle] pathForResource:@"Words08" ofType:@"plist"];
+    } else if (offset < 900) {
+        offset -= 800;
+        path = [[NSBundle mainBundle] pathForResource:@"Words09" ofType:@"plist"];
+    } else if (offset < 1000) {
+        offset -= 900;
+        path = [[NSBundle mainBundle] pathForResource:@"Words10" ofType:@"plist"];
+    }
+    
+    if (path) {
+        NSArray *array = [NSArray arrayWithContentsOfFile:path];
+        
+        int limit = offset + count;
+        for (int i = offset; i < limit; i++) {
+            if (i < array.count) {
+                NSDictionary *dict = [array objectAtIndex:i];
+                WordInfo *wInfo = [[WordInfo alloc] init];
+                wInfo.word = [dict objectForKey:@"word"];
+                wInfo.phoneticSymbol = [dict objectForKey:@"phoneticSymbol"];
+                NSString *oldString = [dict objectForKey:@"translation"];
+                NSString *newString = [oldString stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+                wInfo.translation = newString;
+                
+                [words addObject:wInfo];
+            }
         }
     }
     
     return words;
 }
+
+- (void)loadMorePages {
+    int loadedCount = roundf(_scrollView.contentSize.width / (_scrollView.frame.size.width));
+    if (loadedCount >= _pageCount) {
+        return;
+    }
+    
+    int count = 5; // default load count every time
+    if (_pageCount - loadedCount < count) {
+        count = _pageCount - loadedCount;
+    }
+    
+    UIView *pagesView = [_scrollView viewWithTag:TagPagesView];
+    PageView *lastView = nil;
+    if (pagesView.subviews.count > 0) {
+        lastView = pagesView.subviews.lastObject;
+    }
+    if (pagesView.subviews.count > 1) {
+        UIView *preView = pagesView.subviews[pagesView.subviews.count - 2];
+        [lastView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.equalTo(pagesView);
+            make.left.equalTo(preView.mas_right).offset(20);
+            make.width.equalTo(_scrollView).offset(-20);
+        }];
+    }
+
+    count += loadedCount;
+    for (int i = loadedCount; i < count; i++) {
+        NSArray *words = [self loadWordsWithPage:i];
+        
+        PageView *pView = [[PageView alloc] initWithWords:words selectIndex:0];
+        pView.labelPage.text = [NSString stringWithFormat:@"Page %d of %d", i+1, _pageCount];
+        [pagesView addSubview:pView];
+        [pView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.equalTo(pagesView);
+            if (lastView) {
+                make.left.equalTo(lastView.mas_right).offset(20);
+            } else {
+                make.left.equalTo(pagesView).offset(10);
+            }
+            make.width.equalTo(_scrollView).offset(-20);
+        }];
+        
+        lastView = pView;
+    }
+    
+    [lastView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(pagesView.mas_right).offset(-10);
+    }];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)resetShowCover:(UIScrollView *)scrollView {
+    int count = roundf(scrollView.contentSize.width / (scrollView.frame.size.width));
+    int pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
+    if (count < _pageCount && pageNumber == count - 2) {
+        [self loadMorePages];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self resetShowCover:scrollView];
+}
+
+#pragma mark -
 
 @end

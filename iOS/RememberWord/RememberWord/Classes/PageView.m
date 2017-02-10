@@ -39,10 +39,16 @@
             make.right.equalTo(self).offset(-5);
         }];
         
+        int offsetBottom = -60;
+        if (WinSize.height == 568) { // iPhone 5, iPhoen SE
+            offsetBottom = -40;
+        } else if (WinSize.height == 480) { // iPhone 4
+            
+        }
         WordView *view4 = [[WordView alloc] initWithWord:_words[4]];
         [self addSubview:view4];
         [view4 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self).offset(-60);
+            make.bottom.equalTo(self).offset(offsetBottom);
             make.left.equalTo(self).offset(5);
             make.right.equalTo(self).offset(-5);
         }];
@@ -50,7 +56,7 @@
         WordView *view2 = [[WordView alloc] initWithWord:_words[2]];
         [self addSubview:view2];
         [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(self.mas_centerY).offset(-30);
+            make.centerY.equalTo(self.mas_centerY).offset(offsetBottom * 0.5);
             make.left.equalTo(self).offset(5);
             make.right.equalTo(self).offset(-5);
         }];
