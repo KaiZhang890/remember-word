@@ -17,6 +17,9 @@
     UIScrollView *_scrollView;
     int _pageCount;
     int _currentPage;
+    NSTimer *_timer;
+    int _seconds;
+    UILabel *_labelSeconds;
 }
 
 @end
@@ -28,47 +31,21 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColorFromRGB(0xf6f6f6);
     
-    UIFont *font = [UIFont systemFontOfSize:15];
-    CGFloat offsetLeft = 20;
-    
-    UILabel *labelDays = [[UILabel alloc] init];
-    labelDays.text = @"已练习 0 天";
-    labelDays.textColor = UIColorFromRGB(0x333333);
-    labelDays.font = font;
-    [self.view addSubview:labelDays];
-    [labelDays mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(40);
-        make.left.equalTo(self.view).offset(offsetLeft);
+    UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeSystem];
+    [buttonBack setTitle:@"结束练习" forState:UIControlStateNormal];
+    [buttonBack addTarget:self action:@selector(buttonBackClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:buttonBack];
+    [buttonBack mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-10);
     }];
     
-    UILabel *labelRemain = [[UILabel alloc] init];
-    labelRemain.text = @"今日剩余 10 次练习机会";
-    labelRemain.textColor = UIColorFromRGB(0x333333);
-    labelRemain.font = font;
-    [self.view addSubview:labelRemain];
-    [labelRemain mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(labelDays.mas_bottom).offset(5);
-        make.left.equalTo(self.view).offset(offsetLeft);
-    }];
-    
-    UILabel *labelDuration = [[UILabel alloc] init];
-    labelDuration.text = @"要在 400 秒内翻完 200 页";
-    labelDuration.textColor = UIColorFromRGB(0x333333);
-    labelDuration.font = font;
-    [self.view addSubview:labelDuration];
-    [labelDuration mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(labelRemain.mas_bottom).offset(5);
-        make.left.equalTo(self.view).offset(offsetLeft);
-    }];
-    
-    UILabel *labelIndex = [[UILabel alloc] init];
-    labelIndex.text = @"只看每页第 1 个单词";
-    labelIndex.textColor = UIColorFromRGB(0x333333);
-    labelIndex.font = font;
-    [self.view addSubview:labelIndex];
-    [labelIndex mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(labelDuration.mas_bottom).offset(5);
-        make.left.equalTo(self.view).offset(offsetLeft);
+    UISwitch *switchSound = [[UISwitch alloc] init];
+    switchSound.on = YES;
+    [self.view addSubview:switchSound];
+    [switchSound mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(buttonBack.mas_left).offset(-10);
+        make.centerY.equalTo(buttonBack.mas_centerY);
     }];
     
     UILabel *labelSound = [[UILabel alloc] init];
@@ -77,16 +54,19 @@
     labelSound.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:labelSound];
     [labelSound mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(labelIndex.mas_bottom).offset(10);
-        make.left.equalTo(self.view).offset(offsetLeft);
+        make.right.equalTo(switchSound.mas_left);
+        make.centerY.equalTo(switchSound.mas_centerY);
     }];
     
-    UISwitch *switchSound = [[UISwitch alloc] init];
-    switchSound.on = YES;
-    [self.view addSubview:switchSound];
-    [switchSound mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(labelSound.mas_right);
-        make.centerY.equalTo(labelSound.mas_centerY);
+    _seconds = 400;
+    _labelSeconds = [[UILabel alloc] init];
+    _labelSeconds.text = [NSString stringWithFormat:@"剩余 %d 秒", _seconds];
+    _labelSeconds.textColor = UIColorFromRGB(0x333333);
+    _labelSeconds.font = [UIFont systemFontOfSize:15];
+    [self.view addSubview:_labelSeconds];
+    [_labelSeconds mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(10);
+        make.centerY.equalTo(buttonBack.mas_centerY);
     }];
     
     _pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
@@ -97,7 +77,7 @@
     [self addChildViewController:_pageController];
     [self.view addSubview:_pageController.view];
     [_pageController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(labelSound.mas_bottom).offset(20);
+        make.top.equalTo(self.view).offset(60);
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-40);
     }];
@@ -116,7 +96,34 @@
                              completion:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFire) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+    
+}
+
 #pragma mark - Private methods
+
+- (void)buttonBackClicked {
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)timerFire {
+    _seconds--;
+    _labelSeconds.text = [NSString stringWithFormat:@"剩余 %d 秒", _seconds];
+    if (_seconds <= 0) {
+        [self buttonBackClicked];
+    }
+}
 
 - (NSArray *)loadWordsWithPage:(int)page {
     NSAssert(page >= 1, @"page is %d, should >= 1", page);

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="buttonStart" destination="dJ5-Y4-t2L" id="Du9-Du-NJh"/>
+                <outlet property="labelDays" destination="Ahm-hD-Veg" id="Lvd-4o-odW"/>
+                <outlet property="labelProgress" destination="9xm-SZ-Fdl" id="eN6-tY-33e"/>
+                <outlet property="labelTips" destination="SaK-3R-0ma" id="RW7-AX-F0W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已练习 0 天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-hD-Veg">
+                    <rect key="frame" x="143" y="100" width="88.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日练习 0/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xm-SZ-Fdl">
+                    <rect key="frame" x="133.5" y="141" width="107.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="要在 400 秒内翻完 200 页" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaK-3R-0ma">
+                    <rect key="frame" x="86.5" y="182" width="201" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只看每页第一个单词" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vb-cd-4NZ">
+                    <rect key="frame" x="109" y="223" width="156" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ5-Y4-t2L">
+                    <rect key="frame" x="156" y="318" width="62" height="30"/>
+                    <state key="normal" title="开始练习"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SaK-3R-0ma" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Tb-Ot-91H"/>
+                <constraint firstItem="9xm-SZ-Fdl" firstAttribute="top" secondItem="Ahm-hD-Veg" secondAttribute="bottom" constant="20" id="APp-NX-3rw"/>
+                <constraint firstItem="1Vb-cd-4NZ" firstAttribute="top" secondItem="SaK-3R-0ma" secondAttribute="bottom" constant="20" id="BRY-ft-eCm"/>
+                <constraint firstItem="9xm-SZ-Fdl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ej7-SL-0I5"/>
+                <constraint firstItem="1Vb-cd-4NZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GuQ-gc-kWk"/>
+                <constraint firstItem="dJ5-Y4-t2L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PwX-0M-q3R"/>
+                <constraint firstItem="Ahm-hD-Veg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e1X-rc-dCC"/>
+                <constraint firstItem="dJ5-Y4-t2L" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="f3S-VT-88c"/>
+                <constraint firstItem="Ahm-hD-Veg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="q0R-v5-WFc"/>
+                <constraint firstItem="SaK-3R-0ma" firstAttribute="top" secondItem="9xm-SZ-Fdl" secondAttribute="bottom" constant="20" id="wRE-GC-Q7q"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

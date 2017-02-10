@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "MainViewController.h"
-#import "ShowPageViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,8 +26,7 @@
      周六，周日复习
      */
     
-//    MainViewController *vc = [[MainViewController alloc] init];
-    ShowPageViewController *vc = [[ShowPageViewController alloc] init];
+    MainViewController *vc = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     _window.rootViewController = vc;
     
     [_window makeKeyAndVisible];
