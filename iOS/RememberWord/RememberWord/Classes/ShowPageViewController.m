@@ -8,12 +8,15 @@
 
 #import "ShowPageViewController.h"
 #import "PageView.h"
+#import "PageViewController.h"
 
 #define TagPagesView 100
 
-@interface ShowPageViewController () <UIScrollViewDelegate> {
+@interface ShowPageViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
+    UIPageViewController *_pageController;
     UIScrollView *_scrollView;
     int _pageCount;
+    int _currentPage;
 }
 
 @end
@@ -86,58 +89,39 @@
         make.centerY.equalTo(labelSound.mas_centerY);
     }];
     
-    _scrollView = [[UIScrollView alloc] init];
-    _scrollView.delegate = self;
-    _scrollView.pagingEnabled = YES;
-    _scrollView.showsHorizontalScrollIndicator = NO;
-    [self.view addSubview:_scrollView];
-    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+    _pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+                                                      navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                    options:nil];
+    _pageController.delegate = self;
+    _pageController.dataSource = self;
+    [self addChildViewController:_pageController];
+    [self.view addSubview:_pageController.view];
+    [_pageController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(labelSound.mas_bottom).offset(20);
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(-40);
     }];
+    [_pageController didMoveToParentViewController:self];
     
-    UIView *pagesView = [[UIView alloc] init];
-    pagesView.tag = TagPagesView;
-    [_scrollView addSubview:pagesView];
-    
-    [pagesView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(_scrollView);
-        make.centerY.equalTo(_scrollView);
-    }];
-    
-    PageView *lastView = nil;
     _pageCount = 200;
-    for (int i = 0; i < 3; i++) {
-        NSArray *words = [self loadWordsWithPage:i];
-        
-        PageView *pView = [[PageView alloc] initWithWords:words selectIndex:0];
-        pView.labelPage.text = [NSString stringWithFormat:@"Page %d of %d", i+1, _pageCount];
-        [pagesView addSubview:pView];
-        [pView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(pagesView);
-            if (lastView) {
-                make.left.equalTo(lastView.mas_right).offset(20);
-            } else {
-                make.left.equalTo(pagesView).offset(10);
-            }
-            make.width.equalTo(_scrollView).offset(-20);
-        }];
-
-        lastView = pView;
-    }
+    PageViewController *page = [[PageViewController alloc] init];
+    page.number = 1;
+    page.count = _pageCount;
+    page.words = [self loadWordsWithPage:page.number];
+    page.selectIndex = 0;
     
-    [lastView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(pagesView.mas_right).offset(-10);
-    }];
+    [_pageController setViewControllers:@[page]
+                              direction:UIPageViewControllerNavigationDirectionForward
+                               animated:NO
+                             completion:nil];
 }
 
 #pragma mark - Private methods
 
 - (NSArray *)loadWordsWithPage:(int)page {
-    NSAssert(page >= 0, @"page is %d, should >= 0", page);
+    NSAssert(page >= 1, @"page is %d, should >= 1", page);
     int count = 5; // 5 words each page
-    int offset = page * count;
+    int offset = (page - 1) * count;
     NSMutableArray *words = [NSMutableArray array];
     // not consider cross plist files
     NSString *path = nil;
@@ -200,7 +184,7 @@
         return;
     }
     
-    int count = 5; // default load count every time
+    int count = 3; // default load count every time
     if (_pageCount - loadedCount < count) {
         count = _pageCount - loadedCount;
     }
@@ -249,8 +233,8 @@
 - (void)resetShowCover:(UIScrollView *)scrollView {
     int count = roundf(scrollView.contentSize.width / (scrollView.frame.size.width));
     int pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
-    if (count < _pageCount && pageNumber == count - 2) {
-        //[self loadMorePages];
+    if (count < _pageCount && pageNumber >= count - 2) {
+        [self loadMorePages];
     }
 }
 
@@ -258,6 +242,38 @@
     [self resetShowCover:scrollView];
 }
 
-#pragma mark -
+#pragma mark - UIPageViewControllerDataSource
+
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    PageViewController *prePage = (PageViewController *)viewController;
+    if (prePage.number > 1) {
+        PageViewController *page = [[PageViewController alloc] init];
+        page.number = prePage.number - 1;
+        page.count = _pageCount;
+        page.words = [self loadWordsWithPage:page.number];
+        page.selectIndex = 0;
+        
+        return page;
+    } else {
+        return nil;
+    }
+}
+
+- (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    PageViewController *prePage = (PageViewController *)viewController;
+    if (prePage.number < _pageCount) {
+        PageViewController *page = [[PageViewController alloc] init];
+        page.number = prePage.number + 1;
+        page.count = _pageCount;
+        page.words = [self loadWordsWithPage:page.number];
+        page.selectIndex = 0;
+        
+        return page;
+    } else {
+        return nil;
+    }
+}
+
+#pragma mark - UIPageViewControllerDelegate
 
 @end

@@ -11,6 +11,7 @@
 		4B16ED191E4AC6B800DB396B /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED181E4AC6B800DB396B /* PageView.m */; };
 		4B16ED1C1E4AC7BA00DB396B /* ShowPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */; };
 		4B16ED1F1E4ADDAD00DB396B /* WordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED1E1E4ADDAD00DB396B /* WordView.m */; };
+		4B16ED241E4D8D6100DB396B /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B16ED231E4D8D6100DB396B /* PageViewController.m */; };
 		4B7172721DE7CD5400B6EBAB /* Words02.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172231DE7CD5400B6EBAB /* Words02.plist */; };
 		4B7172731DE7CD5400B6EBAB /* Words03.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172241DE7CD5400B6EBAB /* Words03.plist */; };
 		4B7172741DE7CD5400B6EBAB /* Words04.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B7172251DE7CD5400B6EBAB /* Words04.plist */; };
@@ -121,6 +122,8 @@
 		4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPageViewController.m; sourceTree = "<group>"; };
 		4B16ED1D1E4ADDAD00DB396B /* WordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordView.h; sourceTree = "<group>"; };
 		4B16ED1E1E4ADDAD00DB396B /* WordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordView.m; sourceTree = "<group>"; };
+		4B16ED221E4D8D6100DB396B /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		4B16ED231E4D8D6100DB396B /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		4B7172231DE7CD5400B6EBAB /* Words02.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words02.plist; sourceTree = "<group>"; };
 		4B7172241DE7CD5400B6EBAB /* Words03.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words03.plist; sourceTree = "<group>"; };
 		4B7172251DE7CD5400B6EBAB /* Words04.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Words04.plist; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 				4BB4DF631DE67825006C840A /* MainViewController.m */,
 				4B16ED1A1E4AC7BA00DB396B /* ShowPageViewController.h */,
 				4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */,
+				4B16ED221E4D8D6100DB396B /* PageViewController.h */,
+				4B16ED231E4D8D6100DB396B /* PageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 				4BB4DF561DE58D66006C840A /* AppUtil.m in Sources */,
 				4BB4DF5E1DE677FA006C840A /* BaseViewController.m in Sources */,
 				4BB4DF571DE58D66006C840A /* JSONUtil.m in Sources */,
+				4B16ED241E4D8D6100DB396B /* PageViewController.m in Sources */,
 				4BB4DF521DE58D66006C840A /* UIImage+FX.m in Sources */,
 				4B16ED1C1E4AC7BA00DB396B /* ShowPageViewController.m in Sources */,
 				4BB4DF531DE58D66006C840A /* UIImageView+Rotate.m in Sources */,
