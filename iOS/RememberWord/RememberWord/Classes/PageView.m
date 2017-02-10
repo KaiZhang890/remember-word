@@ -32,7 +32,9 @@
         
         UIView *lastView = nil;
         for (int i = 0; i < words.count; i++) {
-            WordView *view = [[WordView alloc] initWithWord:_words[i]];
+            WordView *view = [[WordView alloc] init];
+            view.word = _words[i];
+            view.isSelected = (i == _selectIndex);
             [self addSubview:view];
             [view mas_makeConstraints:^(MASConstraintMaker *make) {
                 if (i == 0) {
@@ -54,13 +56,6 @@
                 make.left.equalTo(self).offset(5);
                 make.right.equalTo(self).offset(-5);
             }];
-            
-            if (i == _selectIndex) {
-                UIFont *font = [UIFont boldSystemFontOfSize:15];
-                view.labelWord.font = font;
-                view.labelPhonetic.font = font;
-                view.labelTranslation.font = font;
-            }
             
             if (i == words.count - 1) {
                 lastView = nil;

@@ -11,10 +11,7 @@
 
 @interface WordView : BaseView
 
-@property (nonatomic, readonly) UILabel *labelWord;
-@property (nonatomic, readonly) UILabel *labelPhonetic;
-@property (nonatomic, readonly) UILabel *labelTranslation;
-
-- (instancetype)initWithWord:(WordInfo *)word;
+@property (nonatomic, strong) WordInfo *word;
+@property (nonatomic, assign) BOOL isSelected;
 
 @end

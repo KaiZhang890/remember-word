@@ -8,20 +8,22 @@
 
 #import "WordView.h"
 
+@interface WordView () {
+    UILabel *_labelWord;
+    UILabel *_labelPhonetic;
+    UILabel *_labelTranslation;
+}
+
+@end
+
 @implementation WordView
 
-- (instancetype)initWithWord:(WordInfo *)word {
+- (id)init {
     if (self = [super init]) {
-        UIFont *font = [UIFont systemFontOfSize:15];
-        if (WinSize.height == 568) { // iPhone 5, iPhoen SE
-            font = [UIFont systemFontOfSize:14];
-        }
         CGFloat offsetLeft = 110;
         
         _labelWord = [[UILabel alloc] init];
-        _labelWord.text = word.word;
         _labelWord.textColor = UIColorFromRGB(0x333333);
-        _labelWord.font = font;
         _labelWord.adjustsFontSizeToFitWidth = YES;
         [self addSubview:_labelWord];
         [_labelWord mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -31,9 +33,7 @@
         }];
         
         _labelPhonetic = [[UILabel alloc] init];
-        _labelPhonetic.text = word.phoneticSymbol;
         _labelPhonetic.textColor = UIColorFromRGB(0x333333);
-        _labelPhonetic.font = font;
         _labelPhonetic.adjustsFontSizeToFitWidth = YES;
         [self addSubview:_labelPhonetic];
         [_labelPhonetic mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -43,9 +43,7 @@
         }];
         
         _labelTranslation = [[UILabel alloc] init];
-        _labelTranslation.text = word.translation;
         _labelTranslation.textColor = UIColorFromRGB(0x333333);
-        _labelTranslation.font = font;
         _labelTranslation.numberOfLines = 0;
         _labelTranslation.preferredMaxLayoutWidth = WinSize.width - 30 - offsetLeft;
         [self addSubview:_labelTranslation];
@@ -58,6 +56,39 @@
     }
     
     return self;
+}
+
+#pragma mark - Accessor methods
+
+- (void)setWord:(WordInfo *)word {
+    _word = word;
+    
+    _labelWord.text = _word.word;
+    _labelPhonetic.text = _word.phoneticSymbol;
+    _labelTranslation.text = _word.translation;
+}
+
+- (void)setIsSelected:(BOOL)isSelected {
+    _isSelected = isSelected;
+    
+    UIFont *font = nil;
+    if (WinSize.height == 568) {
+        if (_isSelected) {
+            font = [UIFont boldSystemFontOfSize:14];
+        } else {
+            font = [UIFont systemFontOfSize:14];
+        }
+    } else {
+        if (_isSelected) {
+            font = [UIFont boldSystemFontOfSize:15];
+        } else {
+            font = [UIFont systemFontOfSize:15];
+        }
+    }
+    
+    _labelWord.font = font;
+    _labelPhonetic.font = font;
+    _labelTranslation.font = font;
 }
 
 @end
