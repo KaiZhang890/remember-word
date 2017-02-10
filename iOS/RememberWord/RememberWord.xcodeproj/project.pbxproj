@@ -107,7 +107,6 @@
 		4BB4DF581DE58D66006C840A /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF4E1DE58D66006C840A /* UIPlaceHolderTextView.m */; };
 		4BB4DF5E1DE677FA006C840A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF5D1DE677FA006C840A /* BaseViewController.m */; };
 		4BB4DF611DE6780C006C840A /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF601DE6780C006C840A /* CustomNavigationController.m */; };
-		4BB4DF641DE67825006C840A /* DpMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF631DE67825006C840A /* DpMainViewController.m */; };
 		4BB4DF681DE67905006C840A /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF671DE67905006C840A /* BaseObject.m */; };
 		4BB4DF6B1DE6797B006C840A /* WordInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB4DF6A1DE6797B006C840A /* WordInfo.m */; };
 		4BB4DF6D1DE6AB2D006C840A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB4DF6C1DE6AB2D006C840A /* AVFoundation.framework */; };
@@ -238,8 +237,6 @@
 		4BB4DF5D1DE677FA006C840A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		4BB4DF5F1DE6780C006C840A /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
 		4BB4DF601DE6780C006C840A /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
-		4BB4DF621DE67825006C840A /* DpMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DpMainViewController.h; sourceTree = "<group>"; };
-		4BB4DF631DE67825006C840A /* DpMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DpMainViewController.m; sourceTree = "<group>"; };
 		4BB4DF661DE67905006C840A /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
 		4BB4DF671DE67905006C840A /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
 		4BB4DF691DE6797B006C840A /* WordInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordInfo.h; sourceTree = "<group>"; };
@@ -389,8 +386,6 @@
 				4B16ED271E4D9CAE00DB396B /* MainViewController.xib */,
 				4BB4DF5F1DE6780C006C840A /* CustomNavigationController.h */,
 				4BB4DF601DE6780C006C840A /* CustomNavigationController.m */,
-				4BB4DF621DE67825006C840A /* DpMainViewController.h */,
-				4BB4DF631DE67825006C840A /* DpMainViewController.m */,
 				4B16ED1A1E4AC7BA00DB396B /* ShowPageViewController.h */,
 				4B16ED1B1E4AC7BA00DB396B /* ShowPageViewController.m */,
 				4B16ED221E4D8D6100DB396B /* PageViewController.h */,
@@ -734,7 +729,6 @@
 				4BB4DF681DE67905006C840A /* BaseObject.m in Sources */,
 				4B16ED161E4AC68A00DB396B /* BaseView.m in Sources */,
 				4BB4DF611DE6780C006C840A /* CustomNavigationController.m in Sources */,
-				4BB4DF641DE67825006C840A /* DpMainViewController.m in Sources */,
 				4B16ED191E4AC6B800DB396B /* PageView.m in Sources */,
 				4B16ED1F1E4ADDAD00DB396B /* WordView.m in Sources */,
 				4BB4DF201DE58A51006C840A /* main.m in Sources */,
@@ -788,7 +782,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=2",
+					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

@@ -9,8 +9,7 @@
 #import "ShowPageViewController.h"
 #import "PageView.h"
 #import "PageViewController.h"
-
-#define TagPagesView 100
+#import <AVFoundation/AVFoundation.h>
 
 @interface ShowPageViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
     UIPageViewController *_pageController;
@@ -20,6 +19,8 @@
     NSTimer *_timer;
     int _seconds;
     UILabel *_labelSeconds;
+    AVSpeechSynthesizer *_synthesizer;
+    UISwitch *_switchAuto;
 }
 
 @end
@@ -37,13 +38,15 @@
     [self.view addSubview:buttonBack];
     [buttonBack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(20);
-        make.right.equalTo(self.view).offset(-10);
+        make.right.equalTo(self.view).offset(-30);
     }];
     
-    UISwitch *switchSound = [[UISwitch alloc] init];
-    switchSound.on = YES;
-    [self.view addSubview:switchSound];
-    [switchSound mas_makeConstraints:^(MASConstraintMaker *make) {
+    _synthesizer = [[AVSpeechSynthesizer alloc] init];
+    
+    _switchAuto = [[UISwitch alloc] init];
+    _switchAuto.on = NO;
+    [self.view addSubview:_switchAuto];
+    [_switchAuto mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(buttonBack.mas_left).offset(-10);
         make.centerY.equalTo(buttonBack.mas_centerY);
     }];
@@ -54,8 +57,8 @@
     labelSound.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:labelSound];
     [labelSound mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(switchSound.mas_left);
-        make.centerY.equalTo(switchSound.mas_centerY);
+        make.right.equalTo(_switchAuto.mas_left);
+        make.centerY.equalTo(_switchAuto.mas_centerY);
     }];
     
     _seconds = 400;
@@ -185,70 +188,6 @@
     return words;
 }
 
-- (void)loadMorePages {
-    int loadedCount = roundf(_scrollView.contentSize.width / (_scrollView.frame.size.width));
-    if (loadedCount >= _pageCount) {
-        return;
-    }
-    
-    int count = 3; // default load count every time
-    if (_pageCount - loadedCount < count) {
-        count = _pageCount - loadedCount;
-    }
-    
-    UIView *pagesView = [_scrollView viewWithTag:TagPagesView];
-    PageView *lastView = nil;
-    if (pagesView.subviews.count > 0) {
-        lastView = pagesView.subviews.lastObject;
-    }
-    if (pagesView.subviews.count > 1) {
-        UIView *preView = pagesView.subviews[pagesView.subviews.count - 2];
-        [lastView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(pagesView);
-            make.left.equalTo(preView.mas_right).offset(20);
-            make.width.equalTo(_scrollView).offset(-20);
-        }];
-    }
-
-    count += loadedCount;
-    for (int i = loadedCount; i < count; i++) {
-        NSArray *words = [self loadWordsWithPage:i];
-        
-        PageView *pView = [[PageView alloc] initWithWords:words selectIndex:0];
-        pView.labelPage.text = [NSString stringWithFormat:@"Page %d of %d", i+1, _pageCount];
-        [pagesView addSubview:pView];
-        [pView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.equalTo(pagesView);
-            if (lastView) {
-                make.left.equalTo(lastView.mas_right).offset(20);
-            } else {
-                make.left.equalTo(pagesView).offset(10);
-            }
-            make.width.equalTo(_scrollView).offset(-20);
-        }];
-        
-        lastView = pView;
-    }
-    
-    [lastView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(pagesView.mas_right).offset(-10);
-    }];
-}
-
-#pragma mark - UIScrollViewDelegate
-
-- (void)resetShowCover:(UIScrollView *)scrollView {
-    int count = roundf(scrollView.contentSize.width / (scrollView.frame.size.width));
-    int pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
-    if (count < _pageCount && pageNumber >= count - 2) {
-        [self loadMorePages];
-    }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self resetShowCover:scrollView];
-}
-
 #pragma mark - UIPageViewControllerDataSource
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
@@ -283,4 +222,17 @@
 
 #pragma mark - UIPageViewControllerDelegate
 
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+    if (completed && _switchAuto.on) {
+        PageViewController *page = [pageViewController.viewControllers firstObject];
+        [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+        
+        if (page.selectIndex < page.words.count) {
+            WordInfo *wInfo = [page.words objectAtIndex:page.selectIndex];
+            AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:wInfo.word];
+            utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
+            [_synthesizer speakUtterance:utterance];
+        }
+    }
+}
 @end
