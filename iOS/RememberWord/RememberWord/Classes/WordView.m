@@ -47,7 +47,7 @@
         _labelTranslation.textColor = UIColorFromRGB(0x333333);
         _labelTranslation.font = font;
         _labelTranslation.numberOfLines = 0;
-        //_labelTranslation.preferredMaxLayoutWidth = WinSize.width - 30 - offsetLeft;
+        _labelTranslation.preferredMaxLayoutWidth = WinSize.width - 30 - offsetLeft;
         [self addSubview:_labelTranslation];
         [_labelTranslation mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_labelPhonetic.mas_bottom);

@@ -250,7 +250,7 @@
     int count = roundf(scrollView.contentSize.width / (scrollView.frame.size.width));
     int pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
     if (count < _pageCount && pageNumber == count - 2) {
-        [self loadMorePages];
+        //[self loadMorePages];
     }
 }
 
