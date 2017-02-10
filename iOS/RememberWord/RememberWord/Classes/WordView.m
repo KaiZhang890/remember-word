@@ -20,16 +20,15 @@
 
 - (id)init {
     if (self = [super init]) {
-        CGFloat offsetLeft = 110;
-        
         _labelWord = [[UILabel alloc] init];
         _labelWord.textColor = UIColorFromRGB(0x333333);
-        _labelWord.adjustsFontSizeToFitWidth = YES;
+        _labelWord.numberOfLines = 0;
+        _labelWord.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_labelWord];
         [_labelWord mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self);
             make.left.equalTo(self);
-            make.width.mas_lessThanOrEqualTo(offsetLeft);
+            make.width.equalTo(self).multipliedBy(0.3);
         }];
         
         _labelPhonetic = [[UILabel alloc] init];
@@ -38,8 +37,8 @@
         [self addSubview:_labelPhonetic];
         [_labelPhonetic mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_labelWord.mas_top);
-            make.left.equalTo(self).offset(offsetLeft);
-            make.right.lessThanOrEqualTo(self);
+            make.width.equalTo(self).multipliedBy(0.6);
+            make.right.equalTo(self);
         }];
         
         _labelTranslation = [[UILabel alloc] init];
@@ -48,8 +47,8 @@
         [self addSubview:_labelTranslation];
         [_labelTranslation mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_labelPhonetic.mas_bottom);
-            make.left.equalTo(self).offset(offsetLeft);
-            make.right.lessThanOrEqualTo(self);
+            make.width.equalTo(self).multipliedBy(0.6);
+            make.right.equalTo(self);
             make.bottom.equalTo(self);
         }];
     }

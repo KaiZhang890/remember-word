@@ -21,7 +21,10 @@
     self.view.backgroundColor = [UIColor clearColor];
     
     UIView *contentView = [[UIView alloc] init];
-    contentView.backgroundColor = [UIColor whiteColor];
+    //NSString *path = [[NSBundle mainBundle] pathForResource:@"pattern1" ofType:@"png"];
+    UIImage *image = [UIImage imageNamed:@"pattern1"];
+    UIColor *color = [UIColor colorWithPatternImage:image];
+    contentView.backgroundColor = color;
     [self.view addSubview:contentView];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.equalTo(self.view);
